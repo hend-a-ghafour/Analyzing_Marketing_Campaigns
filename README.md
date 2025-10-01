@@ -1,1 +1,1 @@
-# $\color{Red}{Analyzing\; Marketing\; Campaigns}$
+# $\color{Red}{Analyzing} {Marketing} {Campaigns}$
