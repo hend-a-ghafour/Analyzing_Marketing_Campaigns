@@ -1,7 +1,7 @@
 # $\color{Red}{Analyzing}$ $\color{Red}{Marketing}$ $\color{Red}{Campaigns}$
-## $\color{Red}{***Overview:***}$
+## $\color{Red}{Overview:}$
 A fake marketing dataset based on the data of an online subscription business
-## ***$\color{Red}{Dataset}$ $\color{Red}{Description:}$***
+## $\color{Red}{Dataset}$ $\color{Red}{Description:}$
 1. ***user_id*** → An identifier for each user _(7309 user)_.
    >***Note:*** _A user may use more than one platform and engage in more than one day_
 2. ***date_served*** → The date when the ad was shown to the user _(01-01-2018 : 31-01-2018)_.
