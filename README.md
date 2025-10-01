@@ -1,1 +1,1 @@
-# <center>Analyzing Marketing Campaigns</center>
+# $\color{Red}{Analyzing\;Marketing\;Campaigns}$
