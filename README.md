@@ -22,4 +22,20 @@ A fake marketing dataset based on the data of an online subscription business
 10. ***age_group*** → Age range of the user _(0–18, 19–24, 24–30, 30–36, 36–45, 45–55, 55+)_.
 11. ***subscribing_channel*** → The channel through which the user actually subscribed _(House Ads, Email, Push, Facebook, Instagram)_.
 12. ***is_retained*** → Indicates if the user continued the subscription _(True/False)_.
+## $\color{Red}{Initial}$ $\color{Red}{Investigation:}$
+- The first half of the month sticks around 300 users/day. The peak was in the middle of the month "15/1/2018" 
+  with number of users = 767 "on Monday".
+  ***This may be because we sent out a big marketing email, which reached many users who are not daily visitors of the site***
 
+- Users were mostly engaged at the week start "on Monday"
+
+- Nearly half of the users were reached through House Ads, making it the primary marketing channel. Social media (Instagram and Facebook combined) also plays a major role, accounting for over one-third of users, while Push and Email contribute relatively smaller shares.
+
+- The dataset shows a nearly even distribution between control and personalization groups.
+  ***Which suggests that the experiment was designed to fairly compare the effectiveness of personalized ads versus standard ads.***
+
+- The conversion rate is relatively low, with only about 11% of users subscribing after seeing an ad.
+  ***This suggests that while ads are reaching a wide audience, their effectiveness in driving subscriptions is limited.***
+
+- The data indicates that English is used as the default display language, even when the user’s preferred language is different.
+  ***This inconsistency—particularly for Arabic, German, and Spanish—may negatively impact user engagement with the ads.***
