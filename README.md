@@ -42,3 +42,6 @@ A fake marketing dataset based on the data of an online subscription business
 
 - Users aged 19–24 represent the largest single segment (16.56%). More broadly, nearly half of all users are under 30.
   ***indicating that younger audiences are a primary group of interest for marketing efforts.***
+
+- More than half of the subscriptions came from Instagram and Facebook, highlighting social media as the most effective subscribing channels. House Ads, Email, and Push play smaller roles.
+  ***This imbalance raises questions about whether ad distribution is aligned with channel effectiveness and audience targeting.***
