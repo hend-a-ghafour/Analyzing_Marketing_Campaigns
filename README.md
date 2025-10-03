@@ -40,8 +40,8 @@ A fake marketing dataset based on the data of an online subscription business
 - The data indicates that English is used as the default display language, even when the user’s preferred language is different.<br>
   ***This inconsistency—particularly for Arabic, German, and Spanish—may negatively impact user engagement with the ads.***
 
-- Users aged 19–24 represent the largest single segment (16.56%). More broadly, nearly half of all users are under 30.
+- Users aged 19–24 represent the largest single segment (16.56%). More broadly, nearly half of all users are under 30.<br>
   ***indicating that younger audiences are a primary group of interest for marketing efforts.***
 
-- More than half of the subscriptions came from Instagram and Facebook, highlighting social media as the most effective subscribing channels. House Ads, Email, and Push play smaller roles.
+- More than half of the subscriptions came from Instagram and Facebook, highlighting social media as the most effective subscribing channels. House Ads, Email, and Push play smaller roles.<br>
   ***This imbalance raises questions about whether ad distribution is aligned with channel effectiveness and audience targeting.***
