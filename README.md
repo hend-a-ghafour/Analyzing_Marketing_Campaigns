@@ -22,6 +22,13 @@ A fake marketing dataset based on the data of an online subscription business
 10. ***age_group*** → Age range of the user _(0–18, 19–24, 24–30, 30–36, 36–45, 45–55, 55+)_.
 11. ***subscribing_channel*** → The channel through which the user actually subscribed _(House Ads, Email, Push, Facebook, Instagram)_.
 12. ***is_retained*** → Indicates if the user continued the subscription _(True/False)_.
+## $\color{Red}{Data}$ $\color{Red}{Cleaning:}$
+### ***Removing Duplicates:***
+### ***Adjusting Dates:***
+### ***Handling Missing Values:***
+### ***Adjusting Data Types:***
+### ***Adding New Columns:***
+
 ## $\color{Red}{Initial}$ $\color{Red}{Investigation:}$
 - The first half of the month sticks around 300 users/day. The peak was in the middle of the month "15/1/2018" 
   with number of users = 767 "on Monday".<br>
