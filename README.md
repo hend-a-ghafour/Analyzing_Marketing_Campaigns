@@ -48,7 +48,15 @@ A fake marketing dataset based on the data of an online subscription business
   ***This inconsistency—particularly for Arabic, German, and Spanish—may negatively impact user engagement with the ads.***
 
 - Users aged 19–24 represent the largest single segment (16.56%). More broadly, nearly half of all users are under 30.<br>
-  ***indicating that younger audiences are a primary group of interest for marketing efforts.***
+  ***Indicating that younger audiences are a primary group of interest for marketing efforts.***
 
 - More than half of the subscriptions came from Instagram and Facebook, highlighting social media as the most effective subscribing channels. House Ads, Email, and Push play smaller roles.<br>
   ***This imbalance raises questions about whether ad distribution is aligned with channel effectiveness and audience targeting.***
+
+- Despite its strong performance in attracting subscribers, House Ads ranked fourth in retention rate, with 55.93% of its subscribers retained.
+
+- Across all channels, more than half of subscribed users were retained.\n
+  ***Indicating a generally good retention performance overall.***
+
+- Social media channels not only attract the most users but also maintain relatively high retention rates (~70%).
+  ***Suggesting both strong acquisition and engagement potential.***
