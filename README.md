@@ -30,7 +30,8 @@ A fake marketing dataset based on the data of an online subscription business to
 ### ***Adjusting Data Types:***
 ### ***Adding New Columns:***
 
-## $\color{Red}{Initial}$ $\color{Red}{Investigation:}$
+## $\color{Red}{Data} $ $\color{Red}{Exploring:}$
+### ***Initial Investigation:***
 - The first half of the month sticks around 300 users/day. The peak was in the middle of the month "15/1/2018" 
   with number of users = 767 "on Monday".<br>
   ***This may be because we sent out a big marketing email, which reached many users who are not daily visitors of the site***
@@ -61,3 +62,12 @@ A fake marketing dataset based on the data of an online subscription business to
 
 - Social media channels not only attract the most users but also maintain relatively high retention rates (~70%).
   ***Suggesting both strong acquisition and engagement potential.***
+### $\color{Red}{Q1:}$ ***Was the campaign successful?***
+#### Key Findings:
+- Conversion Rate = 13.92% , and Retention Rate = 66.8%.
+- ***House Ads***, while accounting for the largest share of ad impressions ***(≈47%)***, show the lowest performance across both key metrics:
+    - ***Conversion rate:*** 7.51%, well below the overall average of 13.92%.
+    - ***Retention rate:*** 58.05%, the only channel below the overall retention average of 66.80%.
+   ***This indicates that despite being the most widely used marketing channel, House Ads are the least effective in driving both subscriptions and long-term retention.***
+#### Recommendation:  
+- This raises concerns about the efficiency of ad distribution and suggests that reallocating ad resources toward higher-performing channels (like Email or Instagram) could improve overall results.
