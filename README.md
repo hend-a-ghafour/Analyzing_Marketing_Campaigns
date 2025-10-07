@@ -1,6 +1,7 @@
 # $\color{Red}{Analyzing}$ $\color{Red}{Marketing}$ $\color{Red}{Campaigns}$
 ## $\color{Red}{Overview:}$
-A fake marketing dataset based on the data of an online subscription business
+A fake marketing dataset based on the data of an online subscription business to answer the following questions:
+1. Was the campaign successful?
 ## $\color{Red}{Dataset}$ $\color{Red}{Description:}$
 1. ***user_id*** → An identifier for each user _(7309 user)_.
    >***Note:*** _A user may use more than one platform and engage in more than one day_
