@@ -68,14 +68,22 @@ A fake marketing dataset based on the data of an online subscription business to
 - ***Marketing Channels:***
     - **House Ads**, while accounting for the largest share of ad impressions ***(≈47%)***, show the lowest performance across both key metrics:
         - *Conversion rate:* 7.51%, well below the overall average of 13.92%.
-        - *Retention rate:* 58.05%, the only channel below the overall retention average of 66.80%.
+        - *Retention rate:* 58.05%, the only channel below the overall retention average of 66.80%.<br>
       ***This indicates that despite being the most widely used marketing channel, House Ads are the least effective in driving both subscriptions and long-term retention.***
 - ***Variant Classifications:***
   - Despite being almost evenly distributed across marketing channels, **personalized ads** successfully encouraged more users to subscribe compared to **standard (control) ads**
       - **Personalized ads** achieved a higher *conversion rate* (16.80%) than both the control group (9.29%) and the overall conversion rate (13.92%).
-      - **Personalized ads** not only converted more users but also achieved a higher retention rate (66.23%) compared to the control group (62.79%).
+      - **Personalized ads** not only converted more users but also achieved a higher retention rate (66.23%) compared to the control group (62.79%).<br>
       ***This indicates that users acquired through personalized ads are more likely to stay subscribed, reinforcing the effectiveness of personalization in both conversion and retention.***
+- ***Language sataus:***
+  - Users are more likely to subscribe when the ad language matches their preferred language:
+    - Achieving a conversion rate of 14.16%, which is above the overall conversion rate (13.92%) compared to 6.70% for the Non-matching Languages.<br>
+      ***This highlights the importance of language alignment and localization when distributing ads to maximize engagement and conversions.***
+    - Retention rate for matched languages (64.98%) is significantly higher than that of non-matched languages (48.15%), mirroring the conversion rate trend.
+    - The matched-language retention rate (64.98%) is also very close to the overall retention rate (64.53%).<br>
+      ***reinforcing the importance of language consistency in maintaining user engagement.***
 #### Insights:  
 - A rising concerns about the efficiency of Ad distribution, suggesting that reallocating ad resources toward higher-performing channels (like Email or Instagram) could improve overall results.
 - personalization positively influences user engagement and conversion, reinforcing the value of tailoring ad content to user preferences.
 - Personalized ads outperform control ads in both conversion and retention, showing stronger user engagement overall.
+- Understanding the ad plays a major role in driving user engagement — ads that are clearly understood (e.g., those matching the user’s preferred language) show significantly higher conversion and retention rates _(14.16% & 64.89% respectively)_.
