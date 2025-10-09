@@ -66,10 +66,11 @@ A fake marketing dataset based on the data of an online subscription business to
 #### Key Findings:
 - ***Conversion Rate*** = 13.92% , and ***Retention Rate*** = 66.8%.
 - ***Marketing Channels:***
-    - **House Ads**, while accounting for the largest share of ad impressions ***(≈47%)***, show the lowest performance across both key metrics:
-        - *Conversion rate:* 7.51%, well below the overall average of 13.92%.
-        - *Retention rate:* 58.05%, the only channel below the overall retention average of 66.80%.<br>
+    - **House Ads**, exhibit a performance gap, with extensive ad distribution ***(≈47%)***, not translating into results — both conversion (7.51%) and 
+  retention (58.05%) rates remain the lowest.<br>
       ***This indicates that despite being the most widely used marketing channel, House Ads are the least effective in driving both subscriptions and long-term retention.***
+    - **Email**,emonstrates the highest performance, achieving both the top conversion rate (29.11%) and retention rate (73.29%).
+    - **Push notifications** rank second in retention (70.13%), despite their low distribution and conversion rates, suggesting strong post-conversion engagement.
 - ***Variant Classifications:***
   - Despite being almost evenly distributed across marketing channels, **personalized ads** successfully encouraged more users to subscribe compared to **standard (control) ads**
       - **Personalized ads** achieved a higher *conversion rate* (16.80%) than both the control group (9.29%) and the overall conversion rate (13.92%).
@@ -84,6 +85,8 @@ A fake marketing dataset based on the data of an online subscription business to
       ***reinforcing the importance of language consistency in maintaining user engagement.***
 #### Insights:  
 - A rising concerns about the efficiency of Ad distribution, suggesting that reallocating ad resources toward higher-performing channels (like Email or Instagram) could improve overall results.
+- Increase investment in Email campaigns, as this channel delivers the highest conversion and retention performance.
+- Leverage Push notifications more strategically — their strong retention suggests they effectively keep users engaged post-subscription.
 - personalization positively influences user engagement and conversion, reinforcing the value of tailoring ad content to user preferences.
 - Personalized ads outperform control ads in both conversion and retention, showing stronger user engagement overall.
 - Understanding the ad plays a major role in driving user engagement — ads that are clearly understood (e.g., those matching the user’s preferred language) show significantly higher conversion and retention rates _(14.16% & 64.89% respectively)_.
