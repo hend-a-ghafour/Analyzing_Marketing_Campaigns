@@ -1,8 +1,8 @@
-# $\color{#805D87}{Analyzing}$ $\color{#805D87}{Marketing}$ $\color{#805D87}{Campaigns}$
-## $\color{#805D87}{Overview:}$
+# $\color{#454775}{Analyzing}$ $\color{#454775}{Marketing}$ $\color{#454775}{Campaigns}$
+## $\color{#454775}{Overview:}$
 A fake marketing dataset based on the data of an online subscription business to answer the following questions:
 1. Was the campaign successful?
-## $\color{#805D87}{Dataset}$ $\color{#805D87}{Description:}$
+## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
 1. ***user_id*** → An identifier for each user _(7309 user)_.
    >***Note:*** _A user may use more than one platform and engage in more than one day_
 2. ***date_served*** → The date when the ad was shown to the user _(01-01-2018 : 31-01-2018)_.
@@ -23,14 +23,14 @@ A fake marketing dataset based on the data of an online subscription business to
 10. ***age_group*** → Age range of the user _(0–18, 19–24, 24–30, 30–36, 36–45, 45–55, 55+)_.
 11. ***subscribing_channel*** → The channel through which the user actually subscribed _(House Ads, Email, Push, Facebook, Instagram)_.
 12. ***is_retained*** → Indicates if the user continued the subscription _(True/False)_.
-## $\color{#805D87}{Data}$ $\color{#805D87}{Cleaning:}$
+## $\color{#454775}{Data}$ $\color{#454775}{Cleaning:}$
 ### ***Removing Duplicates:***
 ### ***Adjusting Dates:***
 ### ***Handling Missing Values:***
 ### ***Adjusting Data Types:***
 ### ***Adding New Columns:***
 
-## $\color{#805D87}{Data}$ $\color{#805D87}{Exploring:}$
+## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### ***Initial Investigation:***
 - The first half of the month sticks around 300 users/day. The peak was in the middle of the month "15/1/2018" 
   with number of users = 767 "on Monday".<br>
@@ -62,7 +62,7 @@ A fake marketing dataset based on the data of an online subscription business to
 
 - Social media channels not only attract the most users but also maintain relatively high retention rates (~70%).
   ***Suggesting both strong acquisition and engagement potential.***
-### $\color{#805D87}{Q1:}$ ***Was the campaign successful?***
+### $\color{#454775}{Q1:}$ ***Was the campaign successful?***
 #### Key Findings:
 - ***Conversion Rate*** = 13.92% , and ***Retention Rate*** = 66.8%.
 - ***Marketing Channels:***
