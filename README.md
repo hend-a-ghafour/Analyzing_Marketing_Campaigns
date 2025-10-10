@@ -83,6 +83,10 @@ A fake marketing dataset based on the data of an online subscription business to
     - Retention rate for matched languages (64.98%) is significantly higher than that of non-matched languages (48.15%), mirroring the conversion rate trend.
     - The matched-language retention rate (64.98%) is also very close to the overall retention rate (64.53%).<br>
       ***reinforcing the importance of language consistency in maintaining user engagement.***
+- ***Age Groups:***
+   - Ages 19–24 show the highest conversion rate (23.24%) and retention rate (68.98%), making this the most responsive and loyal segment.
+   - Ages 24–30 and 0–18 also perform well, with relatively strong conversion and retention rates above 15%.
+  - Older age groups (30+) show significantly lower conversion rates (~7%) and slightly lower retention rates, except for 55+, which shows a better retention (67.11%) despite low conversion.
 #### Insights:  
 - A rising concerns about the efficiency of Ad distribution, suggesting that reallocating ad resources toward higher-performing channels (like Email or Instagram) could improve overall results.
 - Increase investment in Email campaigns, as this channel delivers the highest conversion and retention performance.
@@ -90,3 +94,5 @@ A fake marketing dataset based on the data of an online subscription business to
 - personalization positively influences user engagement and conversion, reinforcing the value of tailoring ad content to user preferences.
 - Personalized ads outperform control ads in both conversion and retention, showing stronger user engagement overall.
 - Understanding the ad plays a major role in driving user engagement — ads that are clearly understood (e.g., those matching the user’s preferred language) show significantly higher conversion and retention rates _(14.16% & 64.89% respectively)_.
+- Younger audiences (under 30) are more likely to engage and remain retained after conversion, while engagement among users above 30 is weaker.
+Ages above 55, While less likely to convert, exhibit better loyalty once they do.
