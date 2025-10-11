@@ -18,7 +18,7 @@ A fake marketing dataset based on the data of an online subscription business to
    >    - _Control = baseline group (standard ads)_
 
 7. ***converted*** → Indicates if the user subscribed after seeing the ad _(True/False)_.
-8. ***displayed_language*** → The language in which the ad was shown _(English, German, Arabic, Spanish)_.
+8. ***language_displayed*** → The language in which the ad was shown _(English, German, Arabic, Spanish)_.
 9. ***preferred_language*** → The user’s preferred language _(English, German, Arabic, Spanish)_.
 10. ***age_group*** → Age range of the user _(0–18, 19–24, 24–30, 30–36, 36–45, 45–55, 55+)_.
 11. ***subscribing_channel*** → The channel through which the user actually subscribed _(House Ads, Email, Push, Facebook, Instagram)_.
@@ -76,6 +76,11 @@ A fake marketing dataset based on the data of an online subscription business to
       - **Personalized ads** achieved a higher *conversion rate* (16.80%) than both the control group (9.29%) and the overall conversion rate (13.92%).
       - **Personalized ads** not only converted more users but also achieved a higher retention rate (66.23%) compared to the control group (62.79%).<br>
       ***This indicates that users acquired through personalized ads are more likely to stay subscribed, reinforcing the effectiveness of personalization in both conversion and retention.***
+- ***Displayed Language:***
+  - Non-English languages show notably higher conversion rates compared to English.
+  - German (71.62%) & Arabic (50%) conversion rates  are significantly higher than the overall conversion rate (13.92%)
+  - German and English users show the highest retention rates (66.04% & 64.79%), both aligning closely with or slightly above the overall retention rate (64.53%).
+  - While Arabic and Spanish users have moderate retention rates (58.33% & 54.17%), these are below the overall average.
 - ***Language sataus:***
   - Users are more likely to subscribe when the ad language matches their preferred language:
     - Achieving a conversion rate of 14.16%, which is above the overall conversion rate (13.92%) compared to 6.70% for the Non-matching Languages.<br>
@@ -97,6 +102,7 @@ A fake marketing dataset based on the data of an online subscription business to
 - Leverage Push notifications more strategically — their strong retention suggests they effectively keep users engaged post-subscription.
 - personalization positively influences user engagement and conversion, reinforcing the value of tailoring ad content to user preferences.
 - Personalized ads outperform control ads in both conversion and retention, showing stronger user engagement overall.
+- localized ads successfully attract users, but sustaining their engagement may depend on post-subscription experience and language consistency.
 - Understanding the ad plays a major role in driving user engagement — ads that are clearly understood (e.g., those matching the user’s preferred language) show significantly higher conversion and retention rates _(14.16% & 64.89% respectively)_.
 - Younger audiences (under 30) are more likely to engage and remain retained after conversion, while engagement among users above 30 is weaker.
 - Ages above 55, While less likely to convert, exhibit better loyalty once they do.
