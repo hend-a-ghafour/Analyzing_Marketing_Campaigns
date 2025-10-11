@@ -87,6 +87,10 @@ A fake marketing dataset based on the data of an online subscription business to
    - Ages 19–24 show the highest conversion rate (23.24%) and retention rate (68.98%), making this the most responsive and loyal segment.
    - Ages 24–30 and 0–18 also perform well, with relatively strong conversion and retention rates above 15%.
   - Older age groups (30+) show significantly lower conversion rates (~7%) and slightly lower retention rates, except for 55+, which shows a better retention (67.11%) despite low conversion.
+- ***Date Served:***
+  - The 16th and 17th of January recorded the highest conversion rates at 25.52% and 21.95%, respectively.<br>
+    ***This spike aligns with the peak in ad views on January 15 (786 Views).***
+  - The retention rates across different dates show no clear or consistent pattern.  
 #### Insights:  
 - A rising concerns about the efficiency of Ad distribution, suggesting that reallocating ad resources toward higher-performing channels (like Email or Instagram) could improve overall results.
 - Increase investment in Email campaigns, as this channel delivers the highest conversion and retention performance.
@@ -95,4 +99,6 @@ A fake marketing dataset based on the data of an online subscription business to
 - Personalized ads outperform control ads in both conversion and retention, showing stronger user engagement overall.
 - Understanding the ad plays a major role in driving user engagement — ads that are clearly understood (e.g., those matching the user’s preferred language) show significantly higher conversion and retention rates _(14.16% & 64.89% respectively)_.
 - Younger audiences (under 30) are more likely to engage and remain retained after conversion, while engagement among users above 30 is weaker.
-Ages above 55, While less likely to convert, exhibit better loyalty once they do.
+- Ages above 55, While less likely to convert, exhibit better loyalty once they do.
+- Increased exposure and campaign intensity could positively influence user conversions over the following days.
+- There is no strong or consistent relationship between the date served and the retention rate, suggesting that ad timing alone does not significantly influence user retention.
