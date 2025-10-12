@@ -1,7 +1,15 @@
 # $\color{#454775}{Analyzing}$ $\color{#454775}{Marketing}$ $\color{#454775}{Campaigns}$
 ## $\color{#454775}{Overview:}$
-A fake marketing dataset based on the data of an online subscription business to answer the following questions:
-1. Was the campaign successful?
+A fake marketing dataset based on the data of an online subscription business to investigate the following aspects:
+- ***Influence Factors:***
+    1. What factors most strongly influence user conversion and retention rates?
+    2. Is there evidence that multi-touch exposure (users seeing multiple ads) improves conversion or retention rates?
+- ***Audience & Channel Interaction:***
+    3. Which combinations of age group and marketing channel yield the highest conversion and retention rates?
+    4. How do ad type and user age interact to influence conversion and retention rates?  
+- ***Language Effects:***
+    5. How do matched languages and user age together affect conversion and retention rates?
+    6. How does language performance vary across marketing channels in terms of user engagement and retention?
 ## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
 1. ***user_id*** → An identifier for each user _(7309 user)_.
    >***Note:*** _A user may use more than one platform and engage in more than one day_
@@ -62,7 +70,7 @@ A fake marketing dataset based on the data of an online subscription business to
 
 - Social media channels not only attract the most users but also maintain relatively high retention rates (~70%).
   ***Suggesting both strong acquisition and engagement potential.***
-### $\color{#454775}{Q1:}$ ***Was the campaign successful?***
+### $\color{#454775}{Q1:}$ ***What factors most strongly influence user conversion and retention rates?***
 #### Key Findings:
 - ***Conversion Rate*** = 13.92% , and ***Retention Rate*** = 66.8%.
 - ***Marketing Channels:***
