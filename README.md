@@ -116,3 +116,10 @@ A fake marketing dataset based on the data of an online subscription business to
 - Ages above 55, While less likely to convert, exhibit better loyalty once they do.
 - Increased exposure and campaign intensity could positively influence user conversions over the following days.
 - There is no strong or consistent relationship between the date served and the retention rate, suggesting that ad timing alone does not significantly influence user retention.
+### $\color{#454775}{Q2:}$ ***Is there evidence that multi-touch exposure (users seeing multiple ads) improves conversion or retention rates?***
+#### Key Findings:
+- Users who saw multiple ads converted ~3x more often , and were slightly more likely to be retained afterward.
+- Multi-touch exposure conversion rate (25.53%) is nearly double the overall conversion rate (13.92%).
+#### Insights: 
+-multi-touch exposure improves conversion performance, with a modest positive impact on retention.
+
