@@ -72,12 +72,12 @@ A fake marketing dataset based on the data of an online subscription business to
   ***Suggesting both strong acquisition and engagement potential.***
 ### $\color{#454775}{Q1:}$ ***What factors most strongly influence user conversion and retention rates?***
 #### Key Findings:
-- ***Conversion Rate*** = 13.92% , and ***Retention Rate*** = 66.8%.
+- ***Conversion Rate*** = 13.92% , and ***Retention Rate*** = 67.09%.
 - ***Marketing Channels:***
     - **House Ads**, exhibit a performance gap, with extensive ad distribution ***(≈47%)***, not translating into results — both conversion (7.51%) and 
   retention (58.05%) rates remain the lowest.<br>
       ***This indicates that despite being the most widely used marketing channel, House Ads are the least effective in driving both subscriptions and long-term retention.***
-    - **Email**,emonstrates the highest performance, achieving both the top conversion rate (29.11%) and retention rate (73.29%).
+    - **Email**,emonstrates the highest performance, achieving both the top conversion rate (29.11%) and retention rate (77.01%).
     - **Push notifications** rank second in retention (70.13%), despite their low distribution and conversion rates, suggesting strong post-conversion engagement.
 - ***Variant Classifications:***
   - Despite being almost evenly distributed across marketing channels, **personalized ads** successfully encouraged more users to subscribe compared to **standard (control) ads**
@@ -94,7 +94,7 @@ A fake marketing dataset based on the data of an online subscription business to
     - Achieving a conversion rate of 14.16%, which is above the overall conversion rate (13.92%) compared to 6.70% for the Non-matching Languages.<br>
       ***This highlights the importance of language alignment and localization when distributing ads to maximize engagement and conversions.***
     - Retention rate for matched languages (64.98%) is significantly higher than that of non-matched languages (48.15%), mirroring the conversion rate trend.
-    - The matched-language retention rate (64.98%) is also very close to the overall retention rate (64.53%).<br>
+    - The matched-language retention rate (64.98%) is also very close to the overall retention rate (67.09%).<br>
       ***reinforcing the importance of language consistency in maintaining user engagement.***
 - ***Age Groups:***
    - Ages 19–24 show the highest conversion rate (23.24%) and retention rate (68.98%), making this the most responsive and loyal segment.
