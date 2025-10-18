@@ -33,7 +33,9 @@ A fake marketing dataset based on the data of an online subscription business to
 12. ***is_retained*** → Indicates if the user continued the subscription _(True/False)_.
 ## $\color{#454775}{Data}$ $\color{#454775}{Cleaning:}$
 ### ***Removing Duplicates:***
+37 duplicated raws that have been removed
 ### ***Adjusting Dates:***
+from str to datetime
 ### ***Handling Missing Values:***
 ### ***Adjusting Data Types:***
 ### ***Adding New Columns:***
