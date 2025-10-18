@@ -5,7 +5,7 @@ A fake marketing dataset based on the data of an online subscription business to
     1. What factors most strongly influence user conversion and retention rates?
     2. Is there evidence that multi-touch exposure (users seeing multiple ads) improves conversion or retention rates?
 - ***Audience & Channel Interaction:***
-    3. Which combinations of age group and marketing channel yield the highest conversion and retention rates?
+    3. Which combinations of age group and marketing channel yield the highest conversion rates?
     4. How do ad type and user age interact to influence conversion and retention rates?  
 - ***Language Effects:***
     5. How do matched languages and user age together affect conversion and retention rates?
