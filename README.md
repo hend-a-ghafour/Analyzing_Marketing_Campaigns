@@ -9,7 +9,7 @@ A fake marketing dataset based on the data of an online subscription business to
     4. How do ad type and user age interact to influence conversion and retention rates?  
 - ***Subscription Pattern:***
     5. How daily subscription counts differ across marketing channels?
-    6. What patterns emerge in daily subscription activity among different age groups??
+    6. What patterns emerge in daily subscription activity among different age groups?
 ## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
 1. ***user_id*** → An identifier for each user _(7309 user)_.
    >***Note:*** _A user may use more than one platform and engage in more than one day_
