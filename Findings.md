@@ -13,6 +13,7 @@
 - Exhibited a significantly high but irregular number of ads during the month, yet had a limited impact on subscriptions and engagement.
 - Despite the heavy ad distribution, the maximum number of subscribers (21) was lower than several other channels with fewer ads.
 - Shows weak consistency between daily users, subscriptions, and retentions — suggesting overexposure through House Ads did not effectively translate into user engagement.
+- A noticeable decrease in the number of conversions after 10-01-2018
 ##### $\color{#454775}{\bf Instagram:}$
 - Engagement peaked on 17-01-2018, coinciding with the highest levels of daily users, conversions, and retentions.
 - Displays a moderate-to-strong relationship between daily activity and outcomes, indicating that well-timed exposure contributed effectively to conversions and retention.
@@ -55,3 +56,5 @@ User engagement peaked mid-month, mainly driven by the email campaign. Younger u
 - The match between ad serving and conversions is weak to moderate, reflecting partial effectiveness in timing strategy.
 #### $\color{#454775} {Conclusion:}$
 Engagement and conversions peak mainly between Monday and Wednesday, with Email and Instagram showing the strongest alignment between ad timing and conversions. In contrast, Facebook, Push, and House Ads show weaker consistency, suggesting the need to optimize ad scheduling and targeting for better conversion outcomes.
+### $\color{#454775}{-}$ ***Daily conversion and mismatch occurrence via House Ads:*** 
+Starting from January 11, 2018, there was a sharp and sustained rise in mismatch occurrences.This sudden increase appears to have had a strong negative impact on conversions, as the number of converted users dropped significantly after this date and remained consistently low despite continued ad activity.
