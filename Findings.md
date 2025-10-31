@@ -58,3 +58,6 @@ User engagement peaked mid-month, mainly driven by the email campaign. Younger u
 Engagement and conversions peak mainly between Monday and Wednesday, with Email and Instagram showing the strongest alignment between ad timing and conversions. In contrast, Facebook, Push, and House Ads show weaker consistency, suggesting the need to optimize ad scheduling and targeting for better conversion outcomes.
 ### $\color{#454775}{-}$ ***Daily conversion and mismatch occurrence via House Ads:*** 
 Starting from January 11, 2018, there was a sharp and sustained rise in mismatch occurrences.This sudden increase appears to have had a strong negative impact on conversions, as the number of converted users dropped significantly after this date and remained consistently low despite continued ad activity.
+### $\color{#454775}{-}$ ***Estimating Conversion Rates Without the Language Bug:*** 
+#### $\color{#454775} {Conclusion:}$
+Had the language bug not occurred, conversion rates for non-English users would likely have followed a stable upward trend similar to English. The sharp decline and zeros observed in the actual data after January 10 clearly reflect the disruptive effect of the mismatch, underlining the importance of correct language targeting in maintaining user engagement and conversion effectiveness.
