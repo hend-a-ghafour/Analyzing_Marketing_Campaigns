@@ -61,3 +61,8 @@ Starting from January 11, 2018, there was a sharp and sustained rise in mismatch
 ### $\color{#454775}{-}$ ***Estimating Conversion Rates Without the Language Bug:*** 
 #### $\color{#454775} {Conclusion:}$
 Had the language bug not occurred, conversion rates for non-English users would likely have followed a stable upward trend similar to English. The sharp decline and zeros observed in the actual data after January 10 clearly reflect the disruptive effect of the mismatch, underlining the importance of correct language targeting in maintaining user engagement and conversion effectiveness.
+
+### $\color{#454775}{-}$ ***A/B Testing - Email:*** 
+#### $\color{#454775} {Conclusion:}$
+The Personalization variant outperformed the Control group by ≈ 38%. This represents a substantial improvement and provides a strong statistical indication that implementing personalized emails can significantly increase conversion rates. The difference has been confirmed as statistically significant, reinforcing confidence in the effectiveness of the personalization strategy.
+
