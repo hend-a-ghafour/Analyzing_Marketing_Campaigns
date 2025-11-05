@@ -8,13 +8,15 @@ A fake marketing dataset based on the data of an online subscription business to
 - Investigating the best- and worst-performing marketing channels.  
 ## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
 - ***user_id*** $\color{#454775}{→}$ An identifier for each user _(7309 user)_.
-  > $\color{#454775}{\underline{Note:}}$ _A user may use more than one platform and engage in more than one day._
+  > 
+  > $\color{#454775}{Note:}$ _A user may use more than one platform and engage in more than one day._
 - ***date_served*** $\color{#454775}{→}$ The date when the ad was shown to the user _(01-01-2018 : 31-01-2018)_.
 - ***date_subscribed*** $\color{#454775}{→}$ The date when the user subscribed after seeing the ad _(01-01-2018 : 31-01-2018)_.
 - ***date_cancelled*** $\color{#454775}{→}$ The date when the user cancelled their subscription _(05-01-2018 : 09-05-2018)_.
 - ***marketing_channel*** $\color{#454775}{→}$ The source through which the ad was delivered _(House Ads, Push, Facebook, Instagram, & Email)_.
 - ***variant*** $\color{#454775}{→}$ Type of experiment group the user was placed in _(personalization or control)_.
-  > $\color{#454775}{\underline{Note:}}$
+  >
+  > $\color{#454775}{Note:}$
   > - _**Personalization (variant = personalization)** → The user was shown a personalized version of the ad, meaning the ad content was tailored to their profile, preferences, or past behavior (**e.g.,** language choice, recommendations, or custom offers)._
   > - _**Control (variant = control)** → The user was shown a generic version of the ad, without personalization. This group is used as a baseline to compare results and measure how effective personalization is._
   > - 👉 ***In short:***
@@ -55,3 +57,51 @@ A fake marketing dataset based on the data of an online subscription business to
        - Some records show the user as retained, while others mark them as canceled, even within the same channel and week.
        - This record highlights duplicated and conflicting user engagement logs, likely resulting from data integration or tracking issues.
      - **Out of the 13 users who saw the ad 5 times, only 8 converted.**
+## $\color{#454775}{Data}$ $\color{#454775}{Cleaning:}$
+### $\color{#454775}{2.}$ ***Removing Duplicates:***
+$\color{#454775}{a)}$ Remove Exact Duplicates (37 duplicated raws)<br>
+$\color{#454775}{b)}$ Remove Near-Duplicates to ensures each user’s engagement on a given day with a specific ad type is counted only once. 
+### $\color{#454775}{1.}$ ***Changing Dates Data type:***
+$\color{#454775}{a)}$ ***date_served:*** _str_ to _date_ <br>
+$\color{#454775}{b)}$ ***date_subscribed:*** _str_ to _date_ <br>
+$\color{#454775}{c)}$ ***date_canceled:*** _str_ to _date_ <br>
+### $\color{#454775}{3.}$ ***Standardize supscription Dates:***
+To ensure logical and consistent relationships between engagement and subscription dates, the following adjustments were applied: 
+##### $\color{#454775}{a)}$ ***For converted users:*** 
+- ***Issue:*** Some records show _date_subscribed_ earlier than _date_served_. However, a user cannot subscribe before seeing the ad.
+- ***Action:*** When _converted = True_ and _date_subscribed < date_served_, replace _date_subscribed_ with _date_served_.
+##### $\color{#454775}{b)}$ ***For not-converted users:*** 
+- ***Issue:*** Some users who were exposed to multiple ads have a _date_subscribed_ value recorded even when _converted = False_. This creates inconsistencies since non-converted records should not have a valid subscription date.
+- ***Action:*** Set _date_subscribed_ to _NaN_ for all non-converted users to remove this confusion.
+### $\color{#454775}{3.}$ ***Handeling Missing Value:***
+##### ***$\color{#454775}{a)}$ Shared nulls across date_served (except for index 7038), marketing_channel, converted:*** 
+Since those columns share the same missing rows, dropping them together avoids keeping incomplete entries that would otherwise distort the analysis.
+##### ***$\color{#454775}{b)}$ date_served (index 7038):*** 
+Since this is an isolated null in the middle of the dataset, forward-filling (ffill) after sorting by date is a reasonable strategy.
+##### ***$\color{#454775}{c)}$ date_subscribed:***
+1. ***As a Precautionary measure,*** if the user converted,the missing values (if any) would be replaced with **date_served**.  
+2. If the user didn't convert, There is no need to handle the missing values as these values are naturally missing depending on whether the user subscribed or not.
+##### ***$\color{#454775}{d)}$ date_canceled:*** 
+There is no need to handle its missing values in as these values are naturally missing depending on whether the user canceled his subscription or not. Filling them would introduce bias.
+##### ***$\color{#454775}{e)}$ subscribing_channel*** 
+1. ***As a Precautionary measure,***
+   - If the user converted,the missing values (if any) would be replaced with **marketing_channel**
+   - If the user didn't convert & the subscribed channel isn't empty,then these values should be replaced with **NaN**.  
+2. If the user didn't convert, There is no need to handle the missing values as these values are naturally missing depending on whether the user subscribed or not .
+##### ***$\color{#454775}{f)}$ is_retained:*** 
+1. ***As a Precautionary measure,***
+   - If the user converted and there is no mention for canceling the subscription ,the missing values (if any) would be replaced with **True**.
+   - If the user didn't convert & the is_retained value isn't empty,then these values should be replaced with **False**.  
+2. If the user didn't convert, There is no need to handle the missing values as these values are naturally missing depending on whether the user subscribed or not.
+### $\color{#454775}{3.}$ ***Adjusting user_id Column:***
+Due to the inconsistences in some records, where a user may have more than one age group, it would be better to adjust the user name column by adding the first 2 charcters of age group values to the user id
+### $\color{#454775}{3.}$ ***Adding New Columns:***
+- ***is_house_ad:*** Identifies if a particular marketing asset was a house ad or not _(since it is the most frequent value in this column "4733 out of 10000")._
+- ***matched_lang:*** conveys whether the ad was shown to the user in their preferred language.
+- ***dow:*** service Days starting from Monday till Sunday, t measure the most frequent days.
+- ***ad_repeated:*** to check whether the user saw the ad multiple times or once.
+### $\color{#454775}{3.}$ ***Mapping Values:***
+Due to the way pandas stores data, in a large dataset, it can be computationally inefficient to store columns of strings. In such cases, it can speed things up to instead store these values as numbers.
+- ***converted will be as follows:***
+    - _True = 1_
+    - _False = 0_
