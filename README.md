@@ -1,6 +1,6 @@
 # $\color{#454775}{Analyzing}$ $\color{#454775}{Marketing}$ $\color{#454775}{Campaigns}$
 ## $\color{#454775}{Overview:}$
-A fake marketing dataset based on the data of an online subscription business to investigate the following aspects:
+A simulated marketing dataset representing an online subscription business was analyzed to explore the following aspects:  
 - ***Influence Factors:***
     1. What factors most strongly influence user conversion and retention rates?
     2. Is there evidence that multi-touch exposure (users seeing multiple ads) improves conversion or retention rates?
