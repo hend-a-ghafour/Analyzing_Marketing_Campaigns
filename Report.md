@@ -39,69 +39,69 @@ A fake marketing dataset based on the data of an online subscription business to
      - Some exceptions may arise that would require a precautionary measure to make sure that the data values are consistent with each other.
      - **For Example,** A handling step to make sure that if a user converted, the subscription information must be addressed as well.
 ### $\color{#454775}{3.}$ ***User Behaviour:***
-   - ***Users may be exposed to the same ad multiple times, with engagement frequencies ranging from 1 to 12 occurrences.***
-   - ***After reviewing a sample of user engagements:***
-     - **A near-duplicated pattern was noticed for users' multiple exposures**
-     - **One user _(ID: a100000882)_ exhibited 12 ad exposures:**
-       - Within these 12 records, several entries appeared repeated, with some columns identical while others showed slight variations.
-       - **For instance,** this user converted in 4 records — two under the personalized variant (served on January 14) and two under the control variant (served on January 18). The subscription dates associated with these conversions were either January 14 or January 18, suggesting minor inconsistencies or multiple conversions logged for the same user within a short period.
-     - **A similar pattern was observed for another sample user with 10 ad exposures _(ID: a100000878)_:**
-       - The user interacted primarily through House Ads and Email channels.
-       - Multiple records showed identical values across most columns, with slight variations in date_served and date_subscribed.
-       - The user converted multiple times on the same channel _(Email, control variant)_ — an unusual pattern since a user typically subscribes only once.
-       - These repeated or inconsistent entries suggest potential data duplication or logging issues, where multiple impressions and conversions might have been recorded for a single actual event.
-     - **For a user with 8 recorded engagements _(User ID: a100000875)_, several inconsistencies were observed:**
-       - Despite being recorded as the same user, their age group alternated between 19–24 years and 45–55 years, indicating a data entry or merge error.
-       - The user converted four times.
-       - Subscription dates (1/7/18 and 1/11/18) were reused across records, often paired with inconsistent cancellation statuses.
-       - Some records show the user as retained, while others mark them as canceled, even within the same channel and week.
-       - This record highlights duplicated and conflicting user engagement logs, likely resulting from data integration or tracking issues.
-     - **Out of the 13 users who saw the ad 5 times, only 8 converted.**
+***Users may be exposed to the same ad multiple times, with engagement frequencies ranging from 1 to 12 occurrences.***
+#### ***After reviewing a sample of user engagements:***
+- **A near-duplicated pattern was noticed for users' multiple exposures**
+##### One user _(ID: a100000882)_ exhibited 12 ad exposures:
+- Within these 12 records, several entries appeared repeated, with some columns identical while others showed slight variations.
+- **For instance,** this user converted in 4 records — two under the personalized variant (served on January 14) and two under the control variant (served on January 18). The subscription dates associated with these conversions were either January 14 or January 18, suggesting minor inconsistencies or multiple conversions logged for the same user within a short period.
+##### A similar pattern was observed for another sample user with 10 ad exposures _(ID: a100000878)_:
+- The user interacted primarily through House Ads and Email channels.
+- Multiple records showed identical values across most columns, with slight variations in date_served and date_subscribed.
+- The user converted multiple times on the same channel _(Email, control variant)_ — an unusual pattern since a user typically subscribes only once.
+- These repeated or inconsistent entries suggest potential data duplication or logging issues, where multiple impressions and conversions might have been recorded for a single actual event.
+##### For a user with 8 recorded engagements _(User ID: a100000875)_, several inconsistencies were observed:
+- Despite being recorded as the same user, their age group alternated between 19–24 years and 45–55 years, indicating a data entry or merge error.
+- The user converted four times.
+- Subscription dates (1/7/18 and 1/11/18) were reused across records, often paired with inconsistent cancellation statuses.
+- Some records show the user as retained, while others mark them as canceled, even within the same channel and week.
+- This record highlights duplicated and conflicting user engagement logs, likely resulting from data integration or tracking issues.
+##### Out of the 13 users who saw the ad 5 times, only 8 converted.
 ## $\color{#454775}{Data}$ $\color{#454775}{Cleaning:}$
-### $\color{#454775}{2.}$ ***Removing Duplicates:***
+### $\color{#454775}{1.}$ ***Removing Duplicates:***
 $\color{#454775}{a)}$ Remove Exact Duplicates (37 duplicated raws)<br>
 $\color{#454775}{b)}$ Remove Near-Duplicates to ensures each user’s engagement on a given day with a specific ad type is counted only once. 
-### $\color{#454775}{1.}$ ***Changing Dates Data type:***
+### $\color{#454775}{2.}$ ***Changing Dates Data type:***
 $\color{#454775}{a)}$ ***date_served:*** _str_ to _date_ <br>
 $\color{#454775}{b)}$ ***date_subscribed:*** _str_ to _date_ <br>
 $\color{#454775}{c)}$ ***date_canceled:*** _str_ to _date_ <br>
 ### $\color{#454775}{3.}$ ***Standardize supscription Dates:***
 To ensure logical and consistent relationships between engagement and subscription dates, the following adjustments were applied: 
-##### $\color{#454775}{a)}$ ***For converted users:*** 
+#### $\color{#454775}{a)}$ ***For converted users:*** 
 - ***Issue:*** Some records show _date_subscribed_ earlier than _date_served_. However, a user cannot subscribe before seeing the ad.
 - ***Action:*** When _converted = True_ and _date_subscribed < date_served_, replace _date_subscribed_ with _date_served_.
-##### $\color{#454775}{b)}$ ***For not-converted users:*** 
+#### $\color{#454775}{b)}$ ***For not-converted users:*** 
 - ***Issue:*** Some users who were exposed to multiple ads have a _date_subscribed_ value recorded even when _converted = False_. This creates inconsistencies since non-converted records should not have a valid subscription date.
 - ***Action:*** Set _date_subscribed_ to _NaN_ for all non-converted users to remove this confusion.
-### $\color{#454775}{3.}$ ***Handeling Missing Value:***
-##### ***$\color{#454775}{a)}$ Shared nulls across date_served (except for index 7038), marketing_channel, converted:*** 
+### $\color{#454775}{4.}$ ***Handeling Missing Value:***
+#### $\color{#454775}{a)}$ Shared nulls across date_served (except for index 7038), marketing_channel, converted: 
 Since those columns share the same missing rows, dropping them together avoids keeping incomplete entries that would otherwise distort the analysis.
-##### ***$\color{#454775}{b)}$ date_served (index 7038):*** 
+#### $\color{#454775}{b)}$ date_served (index 7038): 
 Since this is an isolated null in the middle of the dataset, forward-filling (ffill) after sorting by date is a reasonable strategy.
-##### ***$\color{#454775}{c)}$ date_subscribed:***
+#### $\color{#454775}{c)}$ date_subscribed:
 1. ***As a Precautionary measure,*** if the user converted,the missing values (if any) would be replaced with **date_served**.  
 2. If the user didn't convert, There is no need to handle the missing values as these values are naturally missing depending on whether the user subscribed or not.
-##### ***$\color{#454775}{d)}$ date_canceled:*** 
+#### $\color{#454775}{d)}$ date_canceled:
 There is no need to handle its missing values in as these values are naturally missing depending on whether the user canceled his subscription or not. Filling them would introduce bias.
-##### ***$\color{#454775}{e)}$ subscribing_channel*** 
+#### $\color{#454775}{e)}$ subscribing_channel:
 1. ***As a Precautionary measure,***
    - If the user converted,the missing values (if any) would be replaced with **marketing_channel**
    - If the user didn't convert & the subscribed channel isn't empty,then these values should be replaced with **NaN**.  
 2. If the user didn't convert, There is no need to handle the missing values as these values are naturally missing depending on whether the user subscribed or not .
-##### ***$\color{#454775}{f)}$ is_retained:*** 
+#### $\color{#454775}{f)}$ is_retained: 
 1. ***As a Precautionary measure,***
    - If the user converted and there is no mention for canceling the subscription ,the missing values (if any) would be replaced with **True**.
    - If the user didn't convert & the is_retained value isn't empty,then these values should be replaced with **False**.  
 2. If the user didn't convert, There is no need to handle the missing values as these values are naturally missing depending on whether the user subscribed or not.
-### $\color{#454775}{3.}$ ***Adjusting user_id Column:***
+### $\color{#454775}{5.}$ ***Adjusting user_id Column:***
 Due to the inconsistences in some records, where a user may have more than one age group, it would be better to adjust the user name column by adding the first 2 charcters of age group values to the user id
-### $\color{#454775}{3.}$ ***Adding New Columns:***
+### $\color{#454775}{6.}$ ***Adding New Columns:***
 - ***is_house_ad:*** Identifies if a particular marketing asset was a house ad or not _(since it is the most frequent value in this column "4733 out of 10000")._
 - ***matched_lang:*** conveys whether the ad was shown to the user in their preferred language.
 - ***dow:*** service Days starting from Monday till Sunday, t measure the most frequent days.
 - ***ad_repeated:*** to check whether the user saw the ad multiple times or once.
-### $\color{#454775}{3.}$ ***Mapping Values:***
+### $\color{#454775}{7.}$ ***Mapping Values:***
 Due to the way pandas stores data, in a large dataset, it can be computationally inefficient to store columns of strings. In such cases, it can speed things up to instead store these values as numbers.
-- ***converted will be as follows:***
-    - _True = 1_
-    - _False = 0_
+##### ***converted will be as follows:***
+- _True = 1_
+- _False = 0_
