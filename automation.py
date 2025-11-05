@@ -58,3 +58,15 @@ def missing_indexs (df,cols):
     return f'''
 - The "{cols}" Column has {result} NULL Values and their Indexes are as follows:\n 
 "{details}"\n'''
+
+                #############################################################################################################
+                #############################################################################################################
+
+# 2- Data Cleaning: 
+# Changing the dates data types:
+def date_change(df,col1,col2,col3):
+    df[col1]= pd.to_datetime(df[col1]) 
+    df[col2]= pd.to_datetime(df[col2]) 
+    df[col3]= pd.to_datetime(df[col3]) 
+    check= df.loc[:,[col1,col2,col3]].info()
+    return check
