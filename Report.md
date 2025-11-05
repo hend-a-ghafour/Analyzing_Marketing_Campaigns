@@ -8,15 +8,15 @@ A fake marketing dataset based on the data of an online subscription business to
 - Investigating the best- and worst-performing marketing channels.  
 ## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
 - ***user_id*** $\color{#454775}{→}$ An identifier for each user _(7309 user)_.
-  > $\color{#454775}{Note:}$ _A user may use more than one platform and engage in more than one day._
+  > $\color{#454775}{\underline{Note:}}$ _A user may use more than one platform and engage in more than one day._
 - ***date_served*** $\color{#454775}{→}$ The date when the ad was shown to the user _(01-01-2018 : 31-01-2018)_.
 - ***date_subscribed*** $\color{#454775}{→}$ The date when the user subscribed after seeing the ad _(01-01-2018 : 31-01-2018)_.
 - ***date_cancelled*** $\color{#454775}{→}$ The date when the user cancelled their subscription _(05-01-2018 : 09-05-2018)_.
 - ***marketing_channel*** $\color{#454775}{→}$ The source through which the ad was delivered _(House Ads, Push, Facebook, Instagram, & Email)_.
 - ***variant*** $\color{#454775}{→}$ Type of experiment group the user was placed in _(personalization or control)_.
-  > $\color{#454775}{Note:}$
-  > - _**Personalization (variant = personalization)** $\color{#454775}{→}$ The user was shown a personalized version of the ad, meaning the ad content was tailored to their profile, preferences, or past behavior (**e.g.,** language choice, recommendations, or custom offers)._
-  > - _**Control (variant = control)** $\color{#454775}{→}$ The user was shown a generic version of the ad, without personalization. This group is used as a baseline to compare results and measure how effective personalization is._
+  > $\color{#454775}{\underline{Note:}}$
+  > - _**Personalization (variant = personalization)** → The user was shown a personalized version of the ad, meaning the ad content was tailored to their profile, preferences, or past behavior (**e.g.,** language choice, recommendations, or custom offers)._
+  > - _**Control (variant = control)** → The user was shown a generic version of the ad, without personalization. This group is used as a baseline to compare results and measure how effective personalization is._
   > - 👉 ***In short:***
   >   - _**Personalization =** test group (customized ads)_
   >   - _**Control =** baseline group (standard ads)_
