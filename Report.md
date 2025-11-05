@@ -7,15 +7,13 @@ A fake marketing dataset based on the data of an online subscription business to
 - Subscription trends and patterns over a specific time period.  
 - Investigating the best- and worst-performing marketing channels.  
 ## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
-- ***user_id*** $\color{#454775}{→}$ An identifier for each user _(7309 user)_.
-  > 
-  > $\color{#454775}{Note:}$ _A user may use more than one platform and engage in more than one day._
+- ***user_id*** $\color{#454775}{→}$ An identifier for each user _(7309 user)_.<br>
+  >  $\color{#454775}{Note:}$ _A user may use more than one platform and engage in more than one day._
 - ***date_served*** $\color{#454775}{→}$ The date when the ad was shown to the user _(01-01-2018 : 31-01-2018)_.
 - ***date_subscribed*** $\color{#454775}{→}$ The date when the user subscribed after seeing the ad _(01-01-2018 : 31-01-2018)_.
 - ***date_cancelled*** $\color{#454775}{→}$ The date when the user cancelled their subscription _(05-01-2018 : 09-05-2018)_.
 - ***marketing_channel*** $\color{#454775}{→}$ The source through which the ad was delivered _(House Ads, Push, Facebook, Instagram, & Email)_.
-- ***variant*** $\color{#454775}{→}$ Type of experiment group the user was placed in _(personalization or control)_.
-  >
+- ***variant*** $\color{#454775}{→}$ Type of experiment group the user was placed in _(personalization or control)_. <br>
   > $\color{#454775}{Note:}$
   > - _**Personalization (variant = personalization)** → The user was shown a personalized version of the ad, meaning the ad content was tailored to their profile, preferences, or past behavior (**e.g.,** language choice, recommendations, or custom offers)._
   > - _**Control (variant = control)** → The user was shown a generic version of the ad, without personalization. This group is used as a baseline to compare results and measure how effective personalization is._
@@ -101,7 +99,7 @@ Due to the inconsistences in some records, where a user may have more than one a
 - ***dow:*** service Days starting from Monday till Sunday, t measure the most frequent days.
 - ***ad_repeated:*** to check whether the user saw the ad multiple times or once.
 ### $\color{#454775}{7.}$ ***Mapping Values:***
-Due to the way pandas stores data, in a large dataset, it can be computationally inefficient to store columns of strings. In such cases, it can speed things up to instead store these values as numbers.
-##### ***converted will be as follows:***
+Due to the way pandas stores data, in a large dataset, it can be computationally inefficient to store columns of strings. In such cases, it can speed things up to instead store these values as numbers. <br>
+***converted will be as follows:***
 - _True = 1_
 - _False = 0_
