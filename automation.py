@@ -261,7 +261,7 @@ def con_ret (df,df2,cols,target):
                                                 #---------------------------------------------------------#
 
 # 2- Comparison between Conversion & Retention Rates function:
-def comparison (df,df2,df3,cols,target): 
+def comparison (df,df2,df3,cols,target,rate1,rate2): 
     first= df.groupby(cols)[target].nunique().reset_index()
     second=df2.groupby(cols)[target].nunique().reset_index()
     result1=first.merge(second,on= cols)
@@ -275,10 +275,64 @@ def comparison (df,df2,df3,cols,target):
     
     final_result= result1.merge(result2, on=cols).loc[:,required_cols]
     final_result.columns = [x.replace('_', ' ').title() if x in cols else x for x in final_result.columns]
-    final_result= final_result.sort_values('Conversion Rate', ascending = False)
+    final_result= final_result.sort_values('Conversion Rate', ascending = False).set_index(final_result.columns[0])
     
-    return final_result
 
+
+    # Combo Chart function:
+    # Data
+    x = final_result.index.to_list()
+    y = final_result[final_result.columns[0]]
+    z = final_result[final_result.columns[1]]
+
+    # Defining colors based on performance
+    colors1 = ['#805D87' if n > rate1 else '#94D1E7' for n in y]
+    colors2 = ['#454775' if m > rate2 else '#EA9FBB' for m in z]
+
+    # Creating the chart 
+    fig,ax1=plt.subplots(figsize=(5,5))
+
+    # 1- Bar Plot 
+    ax1.bar(x,y,width=.5, alpha=.8, color=colors1)
+
+    # 2- Line & Scatter Plots
+    ax2 = ax1.twinx()
+    ax2.plot(x,z, ls='dotted', color='#51687F', label='Retention Rate', alpha=.5)
+    ax2.scatter(x,z,color=colors2)
+
+    # Customizing the chart
+    plt.title('', fontsize=12, color='#454775')
+
+    ax1.set_xlabel('\n'+final_result.index.name+'\n', fontsize=10,color='#313E4C')
+    ax1.tick_params(axis='x',labelcolor='#415366',labelsize=8) 
+
+    ax1.set_ylabel('\n'+final_result.columns[0]+'\n', fontsize=10,color='#313E4C')
+    ax1.tick_params(axis='y',labelcolor='#415366',labelsize=8)
+    ax1.yaxis.set_major_formatter(mticker.PercentFormatter(1,decimals=False)) 
+
+    ax2.set_ylabel('\n'+final_result.columns[1]+'\n', fontsize=10, color='#313E4C')
+    ax2.tick_params(axis='y',labelcolor='#415366',labelsize=8)
+    ax2.yaxis.set_major_formatter(mticker.PercentFormatter(1,decimals=False)) 
+
+    ax1.spines['top'].set_visible(False)
+    ax2.spines['top'].set_visible(False)
+    for spine in ax1.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8)
+    for spine in ax2.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8) 
+         
+    # Legend
+    above_cr = mpatches.Patch(color='#805D87', label=f'Conversion Rate > {rate1:.2%}')
+    below_cr = mpatches.Patch(color='#94D1E7', label=f'Conversion Rate ≤ {rate1:.2%}')
+    above_rr = mlines.Line2D([], [], color='#454775', marker='o',linestyle='None',label=f'Retention Rate > {rate2:.2%}')
+    below_rr = mlines.Line2D([], [], color='#EA9FBB', marker='o', linestyle='None',label=f'Retention Rate ≤ {rate2:.2%}')
+    plt.legend(handles=[above_cr,below_cr,above_rr,below_rr],fontsize=8,labelcolor='#313E4C',loc='upper right',
+    bbox_to_anchor=(1.6, 1),alignment='center', fancybox=True, shadow=True,)
+    return final_result.style.format({'Conversion Rate':'{:,.2%}','Retention Rate':'{:,.2%}'})
 
                                                 #=========================================================#
 
