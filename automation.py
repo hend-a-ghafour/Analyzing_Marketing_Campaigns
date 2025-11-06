@@ -115,7 +115,7 @@ def uniques (df,col_name):
     distinct['Percentage'] = distinct["# Users"]/distinct["# Users"].sum()
     return distinct 
 
-                #############################################################################################################
+                                                #=========================================================#
 
 # b) Visualization: 
     
@@ -240,5 +240,83 @@ def stackedh_plot(df,col_name,col2_name):
         spine.set_edgecolor('#415366')
         spine.set_alpha(.8) 
 
+
+                #############################################################################################################
+
+# Influence Factors:
+#-------------------
+
+# a) Calculations: 
+
+# 1- Conversion & Retention Rates function:
+def con_ret (df,df2,cols,target): 
+    first= df.groupby(cols)[target].nunique().reset_index()
+    second=df2.groupby(cols)[target].nunique().reset_index()
+    result=first.merge(second,on= cols, suffixes=('_total','_part'))
+    result['Rate']= round(result.iloc[:,-1]/result.iloc[:,-2],4)
+    result=result.sort_values('Rate', ascending = False)
+    result.columns = [x.replace('_', ' ').title() if x in cols else x for x in result.columns]
+    return result
+
                                                 #---------------------------------------------------------#
 
+# 2- Comparison between Conversion & Retention Rates function:
+def comparison (df,df2,df3,cols,target): 
+    first= df.groupby(cols)[target].nunique().reset_index()
+    second=df2.groupby(cols)[target].nunique().reset_index()
+    result1=first.merge(second,on= cols)
+    result1['Conversion Rate']= round(result1.iloc[:,-1]/result1.iloc[:,-2],4)
+    
+    third = df3.groupby(cols)[target].nunique().reset_index()
+    result2= second.merge(third,on= cols)
+    result2['Retention Rate']= round(result2.iloc[:,-1]/result2.iloc[:,-2],4)
+    
+    required_cols=list(cols)+ ['Conversion Rate','Retention Rate']
+    
+    final_result= result1.merge(result2, on=cols).loc[:,required_cols]
+    final_result.columns = [x.replace('_', ' ').title() if x in cols else x for x in final_result.columns]
+    final_result= final_result.sort_values('Conversion Rate', ascending = False)
+    
+    return final_result
+
+
+                                                #=========================================================#
+
+# b) Visualization: 
+ 
+# 1- Bar Plot function:
+def bars (df,col1,col2,rate):
+    # Data
+    x= df[col1].astype('str').apply(lambda x: x.title()).to_list()
+    y= df[col2]
+
+    # Defining colors based on performance
+    colors = ['#805D87' if n > rate else '#94D1E7' for n in y] 
+
+    # Creating the chart
+    fig, ax =plt.subplots(figsize=(4.5,4.5))
+    ax.bar(x,y,width=.5, color=colors, alpha=.8)
+    ax.axhline(y=rate, color='#454775', linestyle='--', linewidth=1, label='Overall '+col2, alpha=.5)
+
+    # Customizing the chart
+    plt.title('', fontsize=12,color='#454775')
+
+    plt.xlabel('\n'+col1+'\n', fontsize=10, color='#313E4C')
+    ax.tick_params(axis='x', color='#415366', labelcolor='#415366',labelsize=8)  
+    plt.ylabel('\n'+col2+'\n', fontsize=10, color='#313E4C')
+    ax.tick_params(axis='y', color='#415366', labelcolor='#415366',labelsize=8)  
+
+    plt.legend(fontsize=9,labelcolor='#313E4C',loc='best',alignment='center', fancybox=True, shadow=True)
+    
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8)
+
+    # Annotating chart with values
+    plt.text(x[-1],rate, f'\u2003\u2003\u2003{rate:.2%}', ha= 'left', va ='bottom', fontsize=9, color='#313E4C',fontstyle='italic',weight='semibold')
+
+    for i,v in enumerate(y):
+        plt.text(i,v+.005,f'{v:.2%}',va='bottom',ha='center', fontsize=8,color='#313E4C')

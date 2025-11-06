@@ -105,16 +105,26 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - _False = 0_
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### $\color{#454775}{-}$ ***Initial Investigation:***
-- The highest number of users who saw the Ad was on 15-01-2018 _"on Monday"_ with a total number of 784 users,and before this peak the average daily users was around 327 & after it was around 284 usres/day.
-- Users were mostly engaged at the begining of the week on Mondays (1977 user), followed by Wednesdays & Tuesdays (1610 & 1588 users, Respectively).
-- Users were almost evenly assigned between the control group and the personalization group.
-- 10.47% of users were subscribed after seeing the ad.
+- The highest number of users who saw the Ad was on 15-01-2018 _"on Monday"_ with a total number of 784 users,and before this peak the average daily users was around 327 & after it was around 284 usres/day. <br>
+- Users were mostly engaged at the begining of the week on Mondays (1977 user), followed by Wednesdays & Tuesdays (1610 & 1588 users, Respectively).<br>
+- Users were almost evenly assigned between the control group and the personalization group.<br>
+      ***Which suggests that the experiment was designed to fairly compare the effectiveness of personalized ads versus standard ads.*** <br>
+- 10.47% of users were subscribed after seeing the ad. <br>
+       ***This suggests that while ads are reaching a wide audience, their effectiveness in driving subscriptions is limited.*** <br>
 - 97.55% of ads were displayed in English regardless of the user’s preferred language.
 - For Arabic, German, and Spanish users, the number of ads shown in their language (Displayed) is much lower than 
-  the number of users who prefer that language (Preferred).
-  > $\color{#454775}{Note:}$ _This mismatch suggests that many users are not seeing ads in their preferred language, which could reduce engagement or conversion._
-- House Ads holds the largest amount of mis-matched languages (449 Occurrence "86.68%").
-  > $\color{#454775}{Note:}$ _This could be due to a bug affected the performance._
-- Users aged 19–24 represent the largest single segment 1304users (16.56%), and nearly half of all users are under 30 (47.33%).
-  > $\color{#454775}{Note:}$ _Indicating that younger audiences are a primary group of interest for marketing efforts.
-- Around 47% of users saw the ad via House Ads _(dominant channel)_, Facebook & Instagram form together around 29% of ads seen, & Push Notification and Emails had a smaller but a noticeable portions ()
+  the number of users who prefer that language (Preferred). <br>
+      ***This inconsistency—particularly for Arabic, German, and Spanish—may negatively impact user engagement with the ads.*** <br>
+- House Ads holds the largest amount of mis-matched languages (449 Occurrence "86.68%"). <br> 
+      ***This could be due to a bug affected the performance.*** <br>
+- Users aged 19–24 represent the largest single segment 1304 users (16.56%), and nearly half of all users are under 30 (47.33%).<br>
+      ***Indicating that younger audiences are a primary group of interest for marketing efforts.*** <br>
+- Around 47% of users were reached through House Ads, making it the primary marketing channel, Facebook & Instagram form together around 29% of ads seen, while Push and Email contribute relatively smaller shares (9.96% & 5.65%, respectively). <br>
+- More than half of the subscriptions came from Instagram and Facebook, highlighting social media as the most effective subscribing channels. Also, Email has a noticeable subscription pattern despite being ranked last within the ad distribution. <br>
+      ***This imbalance raises questions about whether ad distribution is aligned with channel effectiveness and audience targeting.*** <br>
+- Despite its strong performance in attracting subscribers, House Ads subscribed and retained usres are relatively low. <br>
+- Across all channels, more than half of subscribed users were retained. <br>
+      ***Indicating a generally good retention performance overall.***
+#### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- 
+- 
