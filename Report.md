@@ -106,5 +106,6 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### $\color{#454775}{-}$ ***Initial Investigation:***
 - The highest number of users who saw the Ad was on 15-01-2018 _"on Monday"_ with a total number of 784 users,and before this peak the average daily users was around 327 & after it was around 284 usres/day.
-- 
-
+- Users were mostly engaged at the begining of the week on Mondays (1977 user), followed by Wednesdays & Tuesdays (1610 & 1588 users, Respectively).
+- Users were almost evenly assigned between the control group and the personalization group.
+- 10.47% of users were subscribed after seeing the ad.
