@@ -113,3 +113,5 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - For Arabic, German, and Spanish users, the number of ads shown in their language (Displayed) is much lower than 
   the number of users who prefer that language (Preferred).
   > $\color{#454775}{Note:}$ _This mismatch suggests that many users are not seeing ads in their preferred language, which could reduce engagement or conversion._
+- House Ads holds the largest amount of mis-matched languages (449 Occurrence "86.68%").
+  > $\color{#454775}{Note:}$ _This could be due to a bug affected the performance._
