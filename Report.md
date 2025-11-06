@@ -105,7 +105,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - _False = 0_
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### $\color{#454775}{-}$ ***Initial Investigation:***
-#### $\bf\color{#454775}{ Observations:}$
+#### $\color{#454775}{\bf{Observations:}}$
 - The highest number of users who saw an ad was recorded on 15-01-2018 (Monday), with a total of 784 users. Before this peak, the average daily users were around 327, and afterward, around 284 users per day.
 - Users were most engaged at the beginning of the week, particularly on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
 - Users were almost evenly assigned between the control and personalization groups, suggesting that the experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.
