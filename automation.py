@@ -109,8 +109,10 @@ def counting (df, col_name):
 
 # 2- Building a Function for unique users: 
 def uniques (df,col_name):
-    distinct = df.groupby(col_name).user_id.nunique().reset_index()
-    distinct['Percentage'] = distinct.user_id/distinct.user_id.sum()
+    distinct = df.groupby(col_name).user_id.nunique().reset_index().rename(columns = {'user_id': "# Users"})
+    distinct.columns = [x.title().replace('_',' ') for x in distinct.columns]
+    distinct = distinct.set_index(distinct.columns[0])
+    distinct['Percentage'] = distinct["# Users"]/distinct["# Users"].sum()
     return distinct 
 
                 #############################################################################################################

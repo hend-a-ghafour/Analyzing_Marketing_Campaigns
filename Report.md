@@ -115,3 +115,6 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
   > $\color{#454775}{Note:}$ _This mismatch suggests that many users are not seeing ads in their preferred language, which could reduce engagement or conversion._
 - House Ads holds the largest amount of mis-matched languages (449 Occurrence "86.68%").
   > $\color{#454775}{Note:}$ _This could be due to a bug affected the performance._
+- Users aged 19–24 represent the largest single segment 1304users (16.56%), and nearly half of all users are under 30 (47.33%).
+  > $\color{#454775}{Note:}$ _Indicating that younger audiences are a primary group of interest for marketing efforts.
+- Around 47% of users saw the ad via House Ads _(dominant channel)_, Facebook & Instagram form together around 29% of ads seen, & Push Notification and Emails had a smaller but a noticeable portions ()
