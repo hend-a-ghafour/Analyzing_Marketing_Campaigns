@@ -208,17 +208,17 @@ def pie_plot (df, col_name):
                                                 #---------------------------------------------------------#
 
 # 4- Building a Function for Horizontal stacked Plots: 
-def stackedh_plot(df,col1_name,col2_name,col3_name):
+def stackedh_plot(df,col_name,col2_name):
     # Data
-    x=df[col1_name].to_list()
-    y=df[col2_name]
-    z=df[col3_name]
+    x=df.index.to_list()
+    y=df[col_name]
+    z=df[col2_name]
 
     # Creating the Chart
     fig,ax= plt.subplots(figsize=(5,5))
     bin_size=.5
-    ax.barh(x,y, label=col2_name,color='#805D87',alpha=.8)
-    ax.barh(x,z,bin_size,label=col3_name, color='#94D1E7',alpha=.8)
+    ax.barh(x,y, label=col_name,color='#805D87',alpha=.8)
+    ax.barh(x,z,bin_size,label=col2_name, color='#94D1E7',alpha=.8)
 
     # Chart Customization
     plt.title('', fontsize=12,color='#454775')
@@ -226,7 +226,7 @@ def stackedh_plot(df,col1_name,col2_name,col3_name):
     plt.xlabel('', fontsize=10,color='#313E4C')
     plt.xticks(fontsize=8,color='#415366')
 
-    plt.ylabel(col1_name, fontsize=10,color='#313E4C')
+    plt.ylabel(df.index.name, fontsize=10,color='#313E4C')
     plt.yticks(fontsize=8,color='#415366')
 
     plt.legend(fontsize=9,labelcolor='#313E4C',loc='center right',fancybox=True, shadow=True)

@@ -109,3 +109,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - Users were mostly engaged at the begining of the week on Mondays (1977 user), followed by Wednesdays & Tuesdays (1610 & 1588 users, Respectively).
 - Users were almost evenly assigned between the control group and the personalization group.
 - 10.47% of users were subscribed after seeing the ad.
+- 97.55% of ads were displayed in English regardless of the user’s preferred language.
+- For Arabic, German, and Spanish users, the number of ads shown in their language (Displayed) is much lower than 
+  the number of users who prefer that language (Preferred).
+  > $\color{#454775}{Note:}$ _This mismatch suggests that many users are not seeing ads in their preferred language, which could reduce engagement or conversion._
