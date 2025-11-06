@@ -1,6 +1,5 @@
 # Description:
-'''A .py file designed to collect all functions created during the project 
-to reduce clutter in the original .ipynb file.'''
+# A .py file designed to collect all functions created during the project to reduce clutter in the original .ipynb file, in order to avoid Typos & Bugs.
 
 # Imported Libraries:
 import pandas as pd 
@@ -16,8 +15,10 @@ import matplotlib.patheffects as path_effects
 import seaborn as sns
 
 
-# 1- Data Assessing Functions:
-# Dataset Desription - Dates:
+# Data Assessing Functions:
+#==========================
+
+# 1- Dataset Desription - Dates:
 def dates(df,cols):
     start= df[cols].astype('datetime64[ns]').min().strftime('%Y-%m-%d') 
     end= df[cols].astype('datetime64[ns]').max().strftime('%Y-%m-%d')
@@ -25,14 +26,18 @@ def dates(df,cols):
     Start: {start} 
     End  : {end}\n'''
 
-# Dataset Desription - Unique elements in each column:
+                                                #---------------------------------------------------------#
+
+# 2- Dataset Desription - Unique elements in each column:
 def col_uniques (df,cols):
     details = []
     for x, y in enumerate(df[cols].unique(),start=1): 
         details.append(f"  {x} - {y}")
     return "\n ".join(details)
 
-# Create a function to identify Duplicated Values:
+                                                #---------------------------------------------------------#
+
+# 3- Create a function to identify Duplicated Values:
 def duplicates (df): 
     if df.duplicated().sum() == 0: 
         result= f'The Dataset has no Duplicated Values with {df.shape[0]} Row'
@@ -41,16 +46,20 @@ def duplicates (df):
 - The Dataset has {df.duplicated().sum()} Duplicated rows and their indexes are as follows:\n 
 "{", ".join(map(str,df[df.duplicated()].index.to_list()))}"\n'''
     return result
+                                                #---------------------------------------------------------#
 
-# Missing Values - Create a function to identify the Null Values:
+
+# 4- Missing Values - Create a function to identify the Null Values:
 def missing(df):
     if df.isna().sum().sum() == 0: 
         result='The Dataset has no NULL Values'
     else: 
         result = f'''The Dataset has {df.isna().sum().sum()} NULL Values that are distributed as follows: '''
     return(result)  
+                                                #---------------------------------------------------------#
 
-# Missing Values - Detemining the indexes of the null values for columns:
+
+# 5- Missing Values - Detemining the indexes of the null values for columns:
 def missing_indexs (df,cols):
     result= df[cols].isna().sum()
     details= ", ".join(map(str,df[df[cols].isna()==True].index.to_list()))
@@ -59,10 +68,13 @@ def missing_indexs (df,cols):
 - The "{cols}" Column has {result} NULL Values and their Indexes are as follows:\n 
 "{details}"\n'''
 
+                
                 #############################################################################################################
                 #############################################################################################################
 
-# 2- Data Cleaning: 
+# Data Cleaning Function: 
+#========================
+
 # Changing the dates data types:
 def date_change(df,col1,col2,col3):
     df[col1]= pd.to_datetime(df[col1]) 
@@ -70,3 +82,154 @@ def date_change(df,col1,col2,col3):
     df[col3]= pd.to_datetime(df[col3]) 
     check= df.loc[:,[col1,col2,col3]].info()
     return check
+
+                
+                #############################################################################################################
+                #############################################################################################################
+
+# Data Exploring functions: 
+#==========================
+
+# Initial Investigation:
+#-----------------------
+
+# a) Calculations: 
+
+# 1- Building a Function for counting users: 
+def counting (df,col_name):
+    nums= df.groupby(col_name).user_id.count().reset_index()
+    nums['Percentage']=nums.user_id/nums.user_id.sum()
+    return nums 
+                                                #---------------------------------------------------------#
+
+
+# 2- Building a Function for unique users: 
+def uniques (df,col_name):
+    distinct = df.groupby(col_name).user_id.nunique().reset_index()
+    distinct['Percentage']=distinct.user_id/distinct.user_id.sum()
+    return distinct 
+
+                #############################################################################################################
+
+# b) Visualization: 
+    
+# 1- Building a Function for Line Plots: 
+def line_plot(df,col_name):
+    # Data
+    x= df.index.astype('str').to_list()
+    y= df[col_name]
+
+    # Creating the Line Chart
+    fig,ax =plt.subplots(figsize = (8,6))
+    ax.plot(x,y,color='#805D87',marker = 'H', alpha=.8)
+
+    # Customizing Chart
+    plt.title('',fontsize=14,color='#454775')
+
+    plt.xlabel(df.index.name,fontsize=12,color='#313E4C')
+    plt.xticks(rotation=90,fontsize=8,color='#415366')
+
+    plt.ylabel(col_name,fontsize=12,color='#313E4C')
+    plt.yticks(fontsize=8,color='#415366')
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8)
+    
+    # Data Annotation with values
+    for i, v in enumerate(y):
+      plt.text(i,v+15, f"{v:.0f}", ha='center', va='center',fontsize=7,color='#313E4C')
+                
+                                                #---------------------------------------------------------#
+
+# 2- Building a Function for Pie Plots: 
+def pie_plot (df,col_name,col_label):
+    # Defining colors based on performance
+    colors = ['#805D87' if x == df[col_name].max() else '#94D1E7' for x in df[col_name]]
+    
+    #Data
+    labels=df[col_label].str.capitalize().to_list()  
+    size = 0.45
+    
+    # Creating the Chart
+    plt.subplots(figsize = (3.5,3.5))
+    wedges, texts, autotexts=plt.pie(df[col_name], radius=1, colors= colors,labels = labels,autopct='%1.2f%%',pctdistance=.8,
+                                 textprops={'fontsize': 10,'color':'#313E4C'}, wedgeprops=dict(width=size, edgecolor='w'),startangle=100)
+    
+    # Customizing Chart
+    for w in wedges:
+        w.set_alpha(0.8)  
+
+    plt.title('',fontsize=12,color='#454775')
+
+                                                #---------------------------------------------------------#
+
+# 3- Building a Function for Horizontal stacked Plots: 
+def stackedh_plot(df,col1_name,col2_name,col3_name):
+    # Data
+    x=df[col1_name].to_list()
+    y=df[col2_name]
+    z=df[col3_name]
+
+    # Creating the Chart
+    fig,ax= plt.subplots(figsize=(5,5))
+    bin_size=.5
+    ax.barh(x,y, label=col2_name,color='#805D87',alpha=.8)
+    ax.barh(x,z,bin_size,label=col3_name, color='#94D1E7',alpha=.8)
+
+    # Chart Customization
+    plt.title('', fontsize=12,color='#454775')
+
+    plt.xlabel('', fontsize=10,color='#313E4C')
+    plt.xticks(fontsize=8,color='#415366')
+
+    plt.ylabel(col1_name, fontsize=10,color='#313E4C')
+    plt.yticks(fontsize=8,color='#415366')
+
+    plt.legend(fontsize=9,labelcolor='#313E4C',loc='center right',fancybox=True, shadow=True)
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8) 
+
+                                                #---------------------------------------------------------#
+
+# 4-Building a Function for Horizontal Bar Plots: 
+def hbar_plot(df, col1_name,col2_name):
+    # Data
+    x= df[col1_name].to_list()
+    y=df[col2_name]
+
+    # Defining colors based on performance
+    colors = ['#805D87' if n == y.max() else '#94D1E7' for n in y] 
+
+    # Creating the chart
+    fig, ax= plt.subplots(figsize=(5,5))
+    ax.barh(x,y,alpha=.8,color=colors)
+    
+    # Customizing the Chart
+    plt.gca().invert_yaxis()
+    plt.title('', fontsize=12,color='#454775')
+
+    plt.xlabel(col2_name, fontsize=10,color='#313E4C')
+    plt.xticks(fontsize=8, color='#415366')
+
+    plt.ylabel(col1_name, fontsize=10,color='#313E4C')
+    plt.yticks(fontsize=8, color='#415366')
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8) 
+        
+    # Annotating bars with values
+    for i,v in enumerate(y):
+        plt.text(v,i,v,va='center',ha='left',fontsize=8,color='#313E4C')

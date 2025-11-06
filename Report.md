@@ -103,3 +103,8 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 ***converted will be as follows:***
 - _True = 1_
 - _False = 0_
+## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
+### $\color{#454775}{-}$ ***Initial Investigation:***
+- The highest number of users who saw the Ad was on 15-01-2018 _"on Monday"_ with a total number of 784 users,and before this peak the average daily users was around 327 & after it was around 284 usres/day.
+- 
+

@@ -31,14 +31,6 @@ A simulated marketing dataset representing an online subscription business was a
 10. ***age_group*** → Age range of the user _(0–18, 19–24, 24–30, 30–36, 36–45, 45–55, 55+)_.
 11. ***subscribing_channel*** → The channel through which the user actually subscribed _(House Ads, Email, Push, Facebook, Instagram)_.
 12. ***is_retained*** → Indicates if the user continued the subscription _(True/False)_.
-## $\color{#454775}{Data}$ $\color{#454775}{Cleaning:}$
-### ***Removing Duplicates:***
-37 duplicated raws that have been removed
-### ***Adjusting Dates:***
-from str to datetime
-### ***Handling Missing Values:***
-### ***Adjusting Data Types:***
-### ***Adding New Columns:***
 
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### ***Initial Investigation:***
