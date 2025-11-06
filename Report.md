@@ -105,26 +105,21 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - _False = 0_
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### $\color{#454775}{-}$ ***Initial Investigation:***
-- The highest number of users who saw the Ad was on 15-01-2018 _"on Monday"_ with a total number of 784 users,and before this peak the average daily users was around 327 & after it was around 284 usres/day. <br>
-- Users were mostly engaged at the begining of the week on Mondays (1977 user), followed by Wednesdays & Tuesdays (1610 & 1588 users, Respectively).<br>
-- Users were almost evenly assigned between the control group and the personalization group.<br>
-      ***Which suggests that the experiment was designed to fairly compare the effectiveness of personalized ads versus standard ads.*** <br>
-- 10.47% of users were subscribed after seeing the ad. <br>
-       ***This suggests that while ads are reaching a wide audience, their effectiveness in driving subscriptions is limited.*** <br>
-- 97.55% of ads were displayed in English regardless of the user’s preferred language.
-- For Arabic, German, and Spanish users, the number of ads shown in their language (Displayed) is much lower than 
-  the number of users who prefer that language (Preferred). <br>
-      ***This inconsistency—particularly for Arabic, German, and Spanish—may negatively impact user engagement with the ads.*** <br>
-- House Ads holds the largest amount of mis-matched languages (449 Occurrence "86.68%"). <br> 
-      ***This could be due to a bug affected the performance.*** <br>
-- Users aged 19–24 represent the largest single segment 1304 users (16.56%), and nearly half of all users are under 30 (47.33%).<br>
-      ***Indicating that younger audiences are a primary group of interest for marketing efforts.*** <br>
-- Around 47% of users were reached through House Ads, making it the primary marketing channel, Facebook & Instagram form together around 29% of ads seen, while Push and Email contribute relatively smaller shares (9.96% & 5.65%, respectively). <br>
-- More than half of the subscriptions came from Instagram and Facebook, highlighting social media as the most effective subscribing channels. Also, Email has a noticeable subscription pattern despite being ranked last within the ad distribution. <br>
-      ***This imbalance raises questions about whether ad distribution is aligned with channel effectiveness and audience targeting.*** <br>
-- Despite its strong performance in attracting subscribers, House Ads subscribed and retained usres are relatively low. <br>
-- Across all channels, more than half of subscribed users were retained. <br>
-      ***Indicating a generally good retention performance overall.***
+#### $\color{#454775}{Observations:}$
+- The highest number of users who saw an ad was recorded on 15-01-2018 (Monday), with a total of 784 users. Before this peak, the average daily users were around 327, and afterward, around 284 users per day.
+- Users were most engaged at the beginning of the week, particularly on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
+- Users were almost evenly assigned between the control and personalization groups, suggesting that the experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.
+- Approximately 10.47% of users subscribed after seeing the ad, indicating that while ads reached a wide audience, their effectiveness in driving subscriptions was limited.
+- Around 97.55% of ads were displayed in English, regardless of the user’s preferred language.
+- For Arabic, German, and Spanish users, the number of ads displayed in their preferred language was significantly lower than the number of users who preferred those languages.
+- House Ads accounted for the largest share of language mismatches (449 occurrences, 86.68%), likely due to a technical bug affecting ad performance.
+- Users aged 19–24 formed the largest segment (1,304 users, 16.56%), with nearly half of all users under 30 (47.33%), indicating that younger audiences were a primary target group.
+- About 47% of users were reached through House Ads, making it the primary marketing channel.
+- Facebook and Instagram together contributed around 29%, while Push and Email accounted for 9.96% and 5.65%, respectively.
 #### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
-- 
-- 
+- ***The experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.***
+- ***Social media channels (Instagram and Facebook) generated more than half of total subscriptions, highlighting their effectiveness in driving conversions.***
+- ***Despite its large reach, House Ads showed relatively low subscription and retention rates, suggesting inefficiency in converting exposure into meaningful engagement.***
+- ***Email marketing, though having the lowest ad distribution, showed a notable subscription pattern, indicating potential for higher efficiency if optimized.***
+- ***The misalignment between ad distribution and conversion performance suggests that marketing efforts might not be fully optimized for channel effectiveness or audience targeting.***
+- ***Across all channels, more than half of the subscribed users were retained, reflecting a generally strong retention performance once users converted.***
