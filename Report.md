@@ -105,7 +105,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - _False = 0_
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
 ### $\color{#454775}{-}$ ***Initial Investigation:***
-#### $\color{#454775}{\bf{Observations:}}$
+### $\color{#454775}{Observations:}$
 - The highest number of users who saw an ad was recorded on 15-01-2018 (Monday), with a total of 784 users. Before this peak, the average daily users were around 327, and afterward, around 284 users per day.
 - Users were most engaged at the beginning of the week, particularly on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
 - Users were almost evenly assigned between the control and personalization groups, suggesting that the experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.
@@ -116,7 +116,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - Users aged 19–24 formed the largest segment (1,304 users, 16.56%), with nearly half of all users under 30 (47.33%), indicating that younger audiences were a primary target group.
 - About 47% of users were reached through House Ads, making it the primary marketing channel.
 - Facebook and Instagram together contributed around 29%, while Push and Email accounted for 9.96% and 5.65%, respectively.
-#### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***The experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.***
 - ***Social media channels (Instagram and Facebook) generated more than half of total subscriptions, highlighting their effectiveness in driving conversions.***
 - ***Despite its large reach, House Ads showed relatively low subscription and retention rates, suggesting inefficiency in converting exposure into meaningful engagement.***
