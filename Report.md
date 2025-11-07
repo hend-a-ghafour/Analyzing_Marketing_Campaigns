@@ -123,3 +123,14 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - ***Email marketing, though having the lowest ad distribution, showed a notable subscription pattern, indicating potential for higher efficiency if optimized.***
 - ***The misalignment between ad distribution and conversion performance suggests that marketing efforts might not be fully optimized for channel effectiveness or audience targeting.***
 - ***Across all channels, more than half of the subscribed users were retained, reflecting a generally strong retention performance once users converted.***
+### $\color{#454775}{1-}$ ***Influence Factors:***
+### $\color{#454775}{a)}$ **key factors that strongly influence user conversion and retention:** 
+### $\color{#454775}{-}$ _Marketing Channels:_
+### $\color{#454775}{Observations:}$
+- Email demonstrates the highest performance, achieving both the top conversion rate (3.75%) and retention rate (76.47%) _-Despite its low distribution (5.65% of total Ads)_.
+- Social Media Platforms had a moderate performance with a retention rate close to the overall rate (13.01%), but facebook subscribers were tending to retain more with  a retention rate of 68.30% _(2nd ranking)_.
+- Push notifications rank second in retention (67.95%), despite their low distribution (9.96%) and conversion rate (7.94%), suggesting strong post-conversion engagement.
+- House Ads exhibit a performance gap, with extensive ad distribution (47.08%) not translating into results — both conversion (7.40%) and retention (58.05) rates remain the lowest.
+
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Adopting a more strategic distribution of ads could improve the engagement quality.***
