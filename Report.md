@@ -124,7 +124,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - ***Email marketing, though having the lowest ad distribution, showed a notable subscription pattern, indicating potential for higher efficiency if optimized.***
 - ***The misalignment between ad distribution and conversion performance suggests that marketing efforts might not be fully optimized for channel effectiveness or audience targeting.***
 - ***Across all channels, more than half of the subscribed users were retained, reflecting a generally strong retention performance once users converted.***
-### $\color{#454775}{a)}$ ***Influence Factors:***
+### $\color{#454775}{a)}$ $\color{#454775}{Influence}$ $\color{#454775}{Factors}$:
 ### $\color{#454775}{1-}$ **key factors that strongly influence user conversion and retention:** 
 ### $\color{#454775}{-}$ _Marketing Channels:_
 ### $\color{#454775}{Observations:}$
