@@ -104,7 +104,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - _True = 1_
 - _False = 0_
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
-### $\color{#454775}{-}$ ***Initial Investigation:***
+## $\color{#454775}{-}$ $\color{#454775}{Initial}$ $\color{#454775}{Investigation}$:
 ### $\color{#454775}{Observations:}$
 - The highest number of users who saw an ad was recorded on 15-01-2018 (Monday), with a total of 784 users. Before this peak, the average daily users were around 327, and afterward, around 284 users per day.
 - Users were most engaged at the beginning of the week, particularly on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
@@ -124,7 +124,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - ***Email marketing, though having the lowest ad distribution, showed a notable subscription pattern, indicating potential for higher efficiency if optimized.***
 - ***The misalignment between ad distribution and conversion performance suggests that marketing efforts might not be fully optimized for channel effectiveness or audience targeting.***
 - ***Across all channels, more than half of the subscribed users were retained, reflecting a generally strong retention performance once users converted.***
-### $\color{#454775}{a)}$ $\color{#454775}{Influence}$ $\color{#454775}{Factors}$:
+## $\color{#454775}{a)}$ $\color{#454775}{Influence}$ $\color{#454775}{Factors}$:
 ### $\color{#454775}{1-}$ **key factors that strongly influence user conversion and retention:** 
 ### $\color{#454775}{-}$ _Marketing Channels:_
 ### $\color{#454775}{Observations:}$
