@@ -135,6 +135,15 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 ### $\color{#454775}{Observations:}$
 - Personalized ads show significantly higher conversion rate of 16.80%, _indicating that personalized messages were more effective at encouraging users to subscribe initially_.
 - A Higher retention rate of was achieved by Controlled Ads 67.63%, exceeding the Personalized group (65.50%) -_Although personalization increased conversions, it did not translate into stronger long-term retention_.
+### $\color{#454775}{-}$ _Languages:_
+### $\color{#454775}{Observations:}$
+- Non-English languages show notably higher Conversion Rates (German 72.60%, Arabic 50%, & Spanish 20%) compared to English 12.12%.
+- Users tend to subscribe more when the ad language matches their preferrences achiving a Conversion Rate of 13.25%.
+- Spanish, German, & English show a relatively close Retention Rates (66.67%, 66.04%, & 66.03%, respectively), while Arabic users had a moderate Retention Rate 58.33%.
+- Retention Rate for matched language (66.33%) is significantly higher than that of non-matched language (51.85%).
+  > $\color{#454775}{Note:}$ _The huge gap between the number of users with matched language (7531 user) and the nit matched language (403 users) should be taken into consideration when further investigating these noticable gaps in conversion and retention rates._
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Adopting a more strategic distribution of ads could improve the engagement quality.***
 - ***The initial observation on Ad Classification showed that tailored advertising attracts more users to subscribe but doesn't guarantee maintaining them.***
+- ***Languages other than English showed a higher conversion rates, but English successfuly managed to maintain subscribers.***
+- ***Language alignment strongly influences both user engagement and continued interaction.***
