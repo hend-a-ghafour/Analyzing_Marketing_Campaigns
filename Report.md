@@ -149,10 +149,15 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - Ages 19-24 & 30-36 form the highest Retention Rates (68.65% & 64.53%, respectively).
 - Ages 0-18, 24-30, & 55+ had a Retention Rates that are relatively close to the Overall Retention Rate of 65.95%.
 - Ages 30-36 & 55+ tend to remain in a modertae Retention Rate despite their lower Conversion Rates.
+### $\color{#454775}{-}$ _Date Served:_
+### $\color{#454775}{Observations:}$
+- The 16th and 17th of January recorded the highest conversion rates at 25.52% & 21.95, respectively, _This spike aligns with the peak in ad views on January 15 (784 view)_.
+- The retention rates across different dates show no clear or consistent pattern, _indicating that user retention was not strongly influenced by the specific date the ad was served_.
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Adopting a more strategic distribution of ads could improve the engagement quality.***
 - ***The initial observation on Ad Classification showed that tailored advertising attracts more users to subscribe but doesn't guarantee maintaining them.***
 - ***Languages other than English showed a higher conversion rates, but English successfuly managed to maintain subscribers.***
 - ***Language alignment strongly influences both user engagement and continued interaction.***
+- ***Increased exposure and campaign intensity could positively influence user conversions over the following days.***
 - ***Younger audiences (under 30) are more likely to engage and remain retained after conversion, while engagement among users above 30 is weaker. Except for ages 30-36 & 
 above 55 years who tend to retain in a high range despite their lower conversion rate.***
