@@ -428,3 +428,31 @@ def h_bar (df, col1, rate):
 
     for i, v in enumerate(y):
         plt.text(v ,i , f'{v:.2%}', va = 'center', ha = 'right', fontsize = 6.5, color = '#313E4C')
+
+                #############################################################################################################
+
+# Audience Interactions:
+#-------------------
+
+# Heatmap Function:
+def heatmap_chart(df): 
+    col_list=df.columns.to_list()
+    result_pivot=df.pivot_table(values=col_list[-1], index=col_list[1],columns=col_list[0])
+    
+    palette_10 = sns.color_palette(['#C9EFF5', '#C5E2ED', '#BECFE3', '#B4BADA', '#AA9ED2', '#A083C7', '#9879B7', '#9070A7', '#886797', '#805D87'])
+
+    # Creating the Chart:
+    ax=sns.heatmap(result_pivot, cmap=palette_10, annot=True, fmt=".2%", annot_kws={'color':'#313E4c','fontsize':9},
+               linewidths=.4)
+
+    # Customizing the Chart:
+    plt.title('', fontsize=12, color='#454775')
+
+    cbar = ax.collections[0].colorbar
+    cbar.ax.yaxis.set_major_formatter(mticker.FuncFormatter(lambda x, pos: f'{x*100:.0f}%'))
+    cbar.set_label('\nPercentages', fontsize=10, color='#313E4c')
+    cbar.ax.tick_params(labelsize=9, colors='#415366')
+
+    ax.set_xlabel(f'\n{col_list[0]}',fontsize=10, color='#313E4c')
+    ax.set_ylabel(f'{col_list[1]}\n',fontsize=10, color='#313E4c')
+    ax.tick_params(axis='both',labelsize=9, colors='#415366',labelrotation=0)
