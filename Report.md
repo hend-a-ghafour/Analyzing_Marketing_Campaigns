@@ -133,8 +133,8 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - House Ads exhibit a performance gap, with extensive ad distribution (47.08%) not translating into results — both conversion (7.40%) and retention (58.05) rates remain the lowest.
 ### $\color{#454775}{-}$ _Variant:_
 ### $\color{#454775}{Observations:}$
-- Personalized ads show significantly higher conversion rate of 16.80%.
-- A Higher retention rate of was achieved by Controlled Ads 67.63%, exceeding the Personalized group (65.50%).
+- Personalized ads show significantly higher conversion rate of 16.80%, _indicating that personalized messages were more effective at encouraging users to subscribe initially_.
+- A Higher retention rate of was achieved by Controlled Ads 67.63%, exceeding the Personalized group (65.50%) -_Although personalization increased conversions, it did not translate into stronger long-term retention_.
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Adopting a more strategic distribution of ads could improve the engagement quality.***
-- ***The general observation on Ad Classification showed that tailored advertising attracts more users to subscribe but doesn't guarantee maintaining them.***
+- ***The initial observation on Ad Classification showed that tailored advertising attracts more users to subscribe but doesn't guarantee maintaining them.***
