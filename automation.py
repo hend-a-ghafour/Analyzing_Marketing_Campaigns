@@ -193,7 +193,7 @@ def pie_plot (df, col_name):
     colors = ['#805D87' if x == df[col_name].max() else '#94D1E7' for x in df[col_name]]
     
     #Data
-    labels = df.index.str.capitalize().to_list()  
+    labels = df.index.str.title().to_list()  
     size = 0.45
     
     # Creating the Chart
@@ -317,10 +317,12 @@ def combo (df, col1, col2, rate1, rate2):
     ax1.set_ylabel('\n' + col1 + '\n', fontsize = 10, color = '#313E4C')
     ax1.tick_params(axis='y', labelcolor = '#415366', labelsize = 8)
     ax1.yaxis.set_major_formatter(mticker.PercentFormatter(1, decimals = False)) 
-
+    ax1.set_ylim(0) 
+    
     ax2.set_ylabel('\n' + col2 + '\n', fontsize = 10, color = '#313E4C')
     ax2.tick_params(axis='y', labelcolor = '#415366', labelsize = 8)
     ax2.yaxis.set_major_formatter(mticker.PercentFormatter(1, decimals = False)) 
+    ax2.set_ylim(0,.8)
 
     ax1.spines['top'].set_visible(False)
     ax2.spines['top'].set_visible(False)

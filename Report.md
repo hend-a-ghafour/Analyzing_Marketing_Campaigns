@@ -97,7 +97,7 @@ Due to the inconsistences in some records, where a user may have more than one a
 - ***is_house_ad:*** Identifies if a particular marketing asset was a house ad or not _(since it is the most frequent value in this column "4733 out of 10000")._
 - ***matched_lang:*** conveys whether the ad was shown to the user in their preferred language.
 - ***dow:*** service Days starting from Monday till Sunday, t measure the most frequent days.
-- ***ad_repeated:*** to check whether the user saw the ad multiple times or once.
+- ***ad_exposure:*** to check whether the user saw the ad multiple times or once.
 ### $\color{#454775}{7.}$ ***Mapping Values:***
 Due to the way pandas stores data, in a large dataset, it can be computationally inefficient to store columns of strings. In such cases, it can speed things up to instead store these values as numbers. <br>
 ***converted will be as follows:***
@@ -108,14 +108,15 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 ### $\color{#454775}{Observations:}$
 - The highest number of users who saw an ad was recorded on 15-01-2018 (Monday), with a total of 784 users. Before this peak, the average daily users were around 327, and afterward, around 284 users per day.
 - Users were most engaged at the beginning of the week, particularly on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
-- Users were almost evenly assigned between the control and personalization groups, suggesting that the experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.
-- Approximately 10.47% of users subscribed after seeing the ad, indicating that while ads reached a wide audience, their effectiveness in driving subscriptions was limited.
+- Users were almost evenly assigned between the control and personalization groups, _suggesting that the experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads_.
+- Approximately 10.47% of users subscribed after seeing the ad, _indicating that while ads reached a wide audience, their effectiveness in driving subscriptions was limited._
 - Around 97.55% of ads were displayed in English, regardless of the user’s preferred language.
 - For Arabic, German, and Spanish users, the number of ads displayed in their preferred language was significantly lower than the number of users who preferred those languages.
 - House Ads accounted for the largest share of language mismatches (449 occurrences, 86.68%), likely due to a technical bug affecting ad performance.
-- Users aged 19–24 formed the largest segment (1,304 users, 16.56%), with nearly half of all users under 30 (47.33%), indicating that younger audiences were a primary target group.
-- About 47% of users were reached through House Ads, making it the primary marketing channel.
+- Users aged 19–24 formed the largest segment (1,304 users, 16.56%), with nearly half of all users under 30 (47.33%), _indicating that younger audiences were a primary target group_.
+- About 47% of users were reached through House Ads, _making it the primary marketing channel_.
 - Facebook and Instagram together contributed around 29%, while Push and Email accounted for 9.96% and 5.65%, respectively.
+- 77.07% of users exposed to the ad only once, & 22.93% saw the ad multiple times.
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***The experiment was fairly designed to compare the effectiveness of personalized ads versus standard ads.***
 - ***Social media channels (Instagram and Facebook) generated more than half of total subscriptions, highlighting their effectiveness in driving conversions.***
@@ -161,3 +162,16 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - ***Increased exposure and campaign intensity could positively influence user conversions over the following days.***
 - ***Younger audiences (under 30) are more likely to engage and remain retained after conversion, while engagement among users above 30 is weaker. Except for ages 30-36 & 
 above 55 years who tend to retain in a high range despite their lower conversion rate.***
+### $\color{#454775}{2-}$ **The impact of repeating the ad for users on Conversion & Retention Rates:** 
+### $\color{#454775}{Observations:}$
+- **Users who saw the ad multiple times (22.93%) showed stronger performance:**
+  - Conversion Rate: 17.83%
+  - Retention Rate: 70.19%
+  - _Repeated exposure appears to reinforce engagement and increase the likelihood of both subscribing and staying subscribed._
+- **Users exposed to the ad only once (77.07%) demonstrated moderate results:**
+  - Conversion Rate: 11.58%
+  - Retention Rate: 64.01%
+  - _Single exposure still produced meaningful conversions but noticeably lower than multi-exposure users._
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Multi-touch ad exposure significantly improves both conversion and retention outcomes, as users who receive repeated exposure are more likely to subscribe and continue using the service.***
+- ***Single-touch exposure produces moderate impact, but not as strong as repeated exposure, this suggests that user reinforcement plays an essential role in both conversion behavior and long-term retention.***
