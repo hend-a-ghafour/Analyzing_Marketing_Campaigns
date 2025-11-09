@@ -388,31 +388,31 @@ def bars (df, col1, col2, rate):
 
 
 # 3- Horizontal Bar Chart function:
-def h_bar(df,col1,col2,rate):
+def h_bar (df, col1, rate):
     # Data
-    x= df[col1].astype('str').to_list()
-    y= df[col2]
+    x = df.index.astype('str').to_list()
+    y = df[col1]
 
     # Defining colors based on performance
     colors = ['#805D87' if n > rate else '#94D1E7' for n in y] 
 
     # Creating the chart
-    fig, ax = plt.subplots(figsize = (6.5,6.5))
-    ax.barh(x,y,.85, color=colors,alpha = .8)
-    ax.axvline(x=rate, color='#454775', linestyle='--', linewidth=1, label='Overall '+col2, alpha=1)
+    fig, ax = plt.subplots(figsize = (6.5 , 6.5))
+    ax.barh(x, y, .85, color = colors, alpha = .8)
+    ax.axvline(x = rate, color = '#454775', linestyle ='--', linewidth = 1, label ='Overall ' + col1, alpha = 1)
 
     # Customizing the chart
     plt.gca().invert_yaxis()
 
-    plt.title('', fontsize=12, color='#454775')
+    plt.title('', fontsize = 12, color = '#454775')
 
-    plt.xlabel(col2, fontsize=10, color='#313E4C')
-    plt.xticks(fontsize=8, color='#415366')
+    plt.xlabel(col1, fontsize = 10, color = '#313E4C')
+    plt.xticks(fontsize = 8, color = '#415366')
 
-    plt.ylabel(col1, fontsize=10, color='#313E4C')
-    plt.yticks( fontsize=8, color='#415366')
+    plt.ylabel(df.index.name, fontsize = 10, color = '#313E4C')
+    plt.yticks(fontsize = 8, color = '#415366')
 
-    plt.legend(fontsize=8,labelcolor='#313E4C', loc='upper right', fancybox=True, shadow=True,bbox_to_anchor=(1, 1.05)) 
+    plt.legend(fontsize = 8, labelcolor = '#313E4C', loc = 'upper right', fancybox = True, shadow = True, bbox_to_anchor = (1, 1.05)) 
 
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -422,7 +422,7 @@ def h_bar(df,col1,col2,rate):
         spine.set_alpha(.8)
     
     # Annotating chart with values
-    plt.text(rate,-1.01, f'{rate:.2%}', ha= 'left', va ='center', fontsize=9, color='#313E4C', fontstyle='italic',weight='semibold')
+    plt.text(rate, -1.01, f'{rate:.2%}', ha = 'left', va = 'center', fontsize = 9, color = '#313E4C', fontstyle = 'italic', weight = 'semibold')
 
-    for i,v in enumerate(y):
-        plt.text(v,i,f'{v:.2%}',va='center',ha='right', fontsize=6.5, color='#313E4C')
+    for i, v in enumerate(y):
+        plt.text(v ,i , f'{v:.2%}', va = 'center', ha = 'right', fontsize = 6.5, color = '#313E4C')
