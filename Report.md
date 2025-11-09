@@ -142,8 +142,17 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - Spanish, German, & English show a relatively close Retention Rates (66.67%, 66.04%, & 66.03%, respectively), while Arabic users had a moderate Retention Rate 58.33%.
 - Retention Rate for matched language (66.33%) is significantly higher than that of non-matched language (51.85%).
   > $\color{#454775}{Note:}$ _The huge gap between the number of users with matched language (7531 user) and the nit matched language (403 users) should be taken into consideration when further investigating these noticable gaps in conversion and retention rates._
+### $\color{#454775}{-}$ _Languages:_
+### $\color{#454775}{Observations:}$
+- **Yonger Users (under 30) →** 19–24 years achieved the highest Conversion Rate (23.24%), followed by 24–30 years (18.72%) and 0–18 years (15.92%), _This is consistent with the Ad Distribution across Age Groups_.
+- **Older Users (above 30) →** showed a significant drop in engagement, with Conversion Rates around 7.29%, & are less likely to engage or convert, _suggesting that ad content  or platform selection may not align well with their preferences_.
+- Ages 19-24 & 30-36 form the highest Retention Rates (68.65% & 64.53%, respectively).
+- Ages 0-18, 24-30, & 55+ had a Retention Rates that are relatively close to the Overall Retention Rate of 65.95%.
+- Ages 30-36 & 55+ tend to remain in a modertae Retention Rate despite their lower Conversion Rates.
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Adopting a more strategic distribution of ads could improve the engagement quality.***
 - ***The initial observation on Ad Classification showed that tailored advertising attracts more users to subscribe but doesn't guarantee maintaining them.***
 - ***Languages other than English showed a higher conversion rates, but English successfuly managed to maintain subscribers.***
 - ***Language alignment strongly influences both user engagement and continued interaction.***
+- ***Younger audiences (under 30) are more likely to engage and remain retained after conversion, while engagement among users above 30 is weaker. Except for ages 30-36 & 
+above 55 years who tend to retain in a high range despite their lower conversion rate.***
