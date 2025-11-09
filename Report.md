@@ -175,3 +175,29 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Multi-touch ad exposure significantly improves both conversion and retention outcomes, as users who receive repeated exposure are more likely to subscribe and continue using the service.***
 - ***Single-touch exposure produces moderate impact, but not as strong as repeated exposure, this suggests that user reinforcement plays an essential role in both conversion behavior and long-term retention.***
+## $\color{#454775}{a)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence}$:
+### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Conversion & Retention Rates:** 
+### $\color{#454775}{Observations:}$
+### $\color{#454775}{-}$ _Arabic:_
+- Arabic shows very high conversion rates across most age groups (0–18, 19–24, 24–30).
+- Performance decreases slightly for older users (45–55 and 55+), but still remains higher than English in most cases.
+### $\color{#454775}{-}$ _English:_
+- Ages under 30 show moderate conversion performance, but still lower compared to Arabic and German.
+- Ages 30 and above exhibit very low conversion rates, dropping to nearly 6–7% in multiple age groups.
+- _English displays the most consistent decline with age._
+### $\color{#454775}{-}$ _German:_
+- German shows relatively high conversion rates across all age groups, with most values around 70%–80%.
+- Even older age groups maintain strong conversion performance (e.g., 30–36 at 50% and 36–45 at 80%).
+- _German is the most stable language in terms of performance across ages._
+### $\color{#454775}{-}$ _Spanish:_
+- Spanish shows mixed performance:
+  - High values for 0–18, 30–36, and 55+.
+  - Low for 19–24 and 24–30.
+  - _This indicates inconsistent response depending on age group._
+### $\color{#454775}{Observations:}$
+- ***Arabic and German outperform other languages overall, showing strong conversion rates across most age groups.***
+- ***English has the weakest performance, especially among users aged 30 and above, where conversion rates drop significantly.***
+- ***Spanish shows age-dependent performance, with high conversion rates in some age brackets but very low in others, indicating uneven responsiveness.***
+- ***German displays the highest stability, maintaining good conversion rates across almost all age segments, making it the most consistently effective language.***
+- ***Arabic performs exceptionally well among younger age groups, suggesting it may be a strong cultural or linguistic driver for younger audiences.***
+> $\color{#454775}{Note:}$ _These patterns highlight that personalized content may need to be tailored more precisely by both language and age group to improve overall engagement. German and Arabic audiences appear highly responsive, whereas English-speaking and middle-aged Spanish-speaking audiences may require different messaging strategies to increase conversion performance._
