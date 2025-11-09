@@ -176,7 +176,7 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Multi-touch ad exposure significantly improves both conversion and retention outcomes, as users who receive repeated exposure are more likely to subscribe and continue using the service.***
 - ***Single-touch exposure produces moderate impact, but not as strong as repeated exposure, this suggests that user reinforcement plays an essential role in both conversion behavior and long-term retention.***
 ## $\color{#454775}{a)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence}$:
-### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Conversion & Retention Rates:** 
+### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Conversion Rates:** 
 ### $\color{#454775}{Observations:}$
 ### $\color{#454775}{-}$ _Arabic:_
 - Arabic shows very high conversion rates across most age groups (0–18, 19–24, 24–30).
@@ -201,3 +201,21 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***German displays the highest stability, maintaining good conversion rates across almost all age segments, making it the most consistently effective language.***
 - ***Arabic performs exceptionally well among younger age groups, suggesting it may be a strong cultural or linguistic driver for younger audiences.***
 > $\color{#454775}{Note:}$ _These patterns highlight that personalized content may need to be tailored more precisely by both language and age group to improve overall engagement. German and Arabic audiences appear highly responsive, whereas English-speaking and middle-aged Spanish-speaking audiences may require different messaging strategies to increase conversion performance._
+### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Retention Rates:** 
+### $\color{#454775}{-}$ _Arabic:_
+- Retention is extremely high across all available age groups (100% in most segments), except one moderate value (66.67% for ages 45–55).
+- Ages 24-45 didn't retain after subscription.
+### $\color{#454775}{-}$ _English:_
+- Consistent retention across all age groups, ranging between 63%–69%.
+- Very stable and uniform pattern, _suggesting English users have predictable retention behavior_.
+### $\color{#454775}{-}$ _German:_
+- High Retention rates for ages below 30 fluctuates between (66.67%) and (76.47%).
+- Lower retention in ages above 30, where it reached 33.33% for for ages 30-36 and remaind at 50% for ages from 36-55+.
+### $\color{#454775}{-}$ _Spanish:_
+- Exceptionally high retention (100%) for younger and mid-age groups (0–36), & a drop to 60% for 55+.
+- Ages 36-55 didn't retain after subscription.
+### $\color{#454775}{Observations:}$
+- ***English users exhibit steady and predictable retention across all age groups—neither extremely high nor low—indicating consistent engagement but limited upside.***
+- ***German retention varies significantly by age, suggesting demographic sensitivity and potential need for targeted messaging strategies for older audiences.***
+- ***Overall, younger usersretain better in most languages—particularly Arabic and Spanish—while older age segments show more mixed or weaker retention performance, especially in German and Spanish.***
+> $\color{#454775}{Note:}$ _there is a strong likelihood of bias in the Conversion & Retention Rate data due to small sample sizes, missing values, non-random exposure, and uneven group distributions. The results are informative but should be interpreted with caution, especially when comparing across languages or age groups._
