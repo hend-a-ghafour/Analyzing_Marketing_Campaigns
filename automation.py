@@ -421,7 +421,7 @@ def h_bar (df, col1, rate):
 
 
 # Demographic Influence:
-#-------------------
+#----------------------
 
 # a) Calculations: 
 
@@ -461,3 +461,126 @@ def heatmap_chart(df):
     ax.set_xlabel(f'\n{col_list[0]}',fontsize=10, color='#313E4c')
     ax.set_ylabel(f'{col_list[1]}\n',fontsize=10, color='#313E4c')
     ax.tick_params(axis='both',labelsize=9, colors='#415366',labelrotation=0)
+
+
+                #############################################################################################################
+
+
+# Subscription Pattern:
+#----------------------
+    
+# Creating the line charts function:
+def group_line_plots (df1, df2, df3, cols, target): 
+    # Gathering the tables of interest:
+    first = df1.groupby(cols).user_id.count().reset_index().rename(columns = {target : 'Daily Users'})
+    second = df2.groupby(cols).user_id.count().reset_index().rename(columns = {target : 'Converted'})
+    third = df3.groupby(cols).user_id.count().reset_index().rename(columns = {target : 'Retained'})
+
+    # Merging tables:
+    result = first.merge(second, how = 'left', on = cols).merge(third, how = 'left', on = cols)
+    
+    # Table customization
+    result.fillna(0, inplace = True)
+    result.columns = [x.replace('_', ' ').title() if x in cols else x for x in result.columns]
+
+    #Visualization
+    df_list = list(result[result.columns[1]].unique())
+    
+    for i in range(len(df_list)):
+        selects = result[result[result.columns[1]] == df_list[i]]
+        label = selects.columns[0]
+        x = selects[label].astype('str').to_list() 
+        y1 = selects[selects.columns[2]].astype('int64') # Total Users
+        y2 = selects[selects.columns[3]].astype('int64') # Converted
+        y3 = selects[selects.columns[4]].astype('int64') # Retained
+         
+        # Creating the Chart:
+        fig, ax = plt.subplots(figsize = (8 , 5))
+        
+        ax.plot(x, y1, color = '#EA9FBB', marker = 'H', markersize = 4, alpha = .5, ls = "--", label = selects.columns[2])
+        
+        ax.plot(x, y2, color='#805D87', marker = 'H', markersize=2, alpha=.8,label=selects.columns[3])
+        
+        ax.plot(x,y3,color='#94D1E7', marker = 'H', markersize=2, alpha=.8, label=selects.columns[4])
+        
+        # Customization
+        plt.title('\n\n' + result.columns[1] + ": " + df_list[i] + '\n\n\n\n', fontsize = 14, color = '#454775', loc = 'left')
+
+        plt.xlabel(label, fontsize = 12, color = '#313E4C')
+        plt.xticks(rotation=90, fontsize = 8, color = '#415366')
+
+        plt.ylabel('Total', fontsize = 12, color = '#313E4C')
+        plt.yticks(fontsize = 8, color = '#415366')
+
+        plt.grid(axis = 'y', linestyle = ":", color = '#454775', linewidth = 1, alpha = .3)
+        
+        plt.legend(fontsize=8, labelcolor = '#313E4C', loc = 'center left', fancybox = True, shadow = True)
+        
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        for spine in ax.spines.values():
+            spine.set_linewidth(1.2)
+            spine.set_edgecolor('#415366')
+            spine.set_alpha(.8)
+            plt.xticks(rotation=90)
+        
+        # Anotating Maximun & Minimum Values:
+        # Total Users
+        ax.text(selects[y1 == y1.max()][label].astype('str').iloc[0], y1.max(), y1.max(), ha = 'center', va = 'center', fontsize = 7, color = '#313E4C')
+        ax.text(selects[y1 == y1.min()][label].astype('str').iloc[0], y1.min(), y1.min(), ha = 'center', va = 'center', fontsize = 7, color = '#313E4C')
+
+        # Converted
+        ax.text(selects[y2 == y2.max()][label].astype('str').iloc[0], y2.max(), y2.max(), ha = 'right', va = 'bottom', fontsize = 7, color = '#313E4C')
+        ax.text(selects[y2 == y2.min()][label].astype('str').iloc[0], y2.min(), y2.min(), ha = 'right', va = 'bottom', fontsize = 7, color = '#313E4C')
+        
+        # Retained
+        ax.text(selects[y3 == y3.max()][label].astype('str').iloc[0], y3.max(), y3.max(), ha = 'left', va = 'top', fontsize = 7, color = '#313E4C')
+        ax.text(selects[y3 == y3.min()][label].astype('str').iloc[0], y3.min(), y3.min(), ha = 'left', va = 'top', fontsize = 7, color = '#313E4C')
+
+        # Creating Maximum & Minimum Tables
+        rows=['Daily Users','Converted','Retained']
+        row_colors=['#EA9FBB','#805D87','#94D1E7']
+
+        # Maximum Table
+        data_max = [[y1.max(), selects[y1 == y1.max()][label].astype(str).iloc[0]],
+                    [y2.max(), selects[y2 == y2.max()][label].astype(str).iloc[0]], 
+                    [y3.max(), selects[y3 == y3.max()][label].astype(str).iloc[0]]]
+        
+        columns_max = ['Maximum', label]
+        
+        table_max = ax.table(cellText = data_max, colLabels = columns_max, loc = 'top right',rowLoc = 'left', rowLabels = rows, rowColours = row_colors) 
+        
+        table_max.scale(2, 1.5)
+
+        # Table_max Customization
+        for key, cell in table_max.get_celld().items():
+            cell.set_text_props(color = '#313E4C', fontsize = 10)
+            cell.set_edgecolor('#454775')
+            cell.set_linewidth(1)
+        
+        for (row,col), cell in table_max.get_celld().items():
+            cell.set_alpha(.3)
+        
+        table_max.auto_set_column_width(col = list(range(len(selects.columns))))
+        
+        # Minimum Table
+        data_min = [[y1.min(), selects[y1 == y1.min()][label].astype(str).iloc[0]],
+                    [y2.min(), selects[y2 == y2.min()][label].astype(str).iloc[0]], 
+                    [y3.min(), selects[y3 == y3.min()][label].astype(str).iloc[0]]]
+        
+        columns_min = [ 'Minimum', label]
+        
+        table_min=ax.table(cellText = data_min, colLabels = columns_min, loc = 'right', rowLoc = 'left', rowLabels = rows, rowColours = row_colors)
+        
+        table_min.scale(2, 1.5)
+        
+        # Table_min customization
+        for key, cell in table_min.get_celld().items():
+            cell.set_text_props(color = '#313E4C', fontsize = 10)
+            cell.set_edgecolor('#454775')
+            cell.set_linewidth(1)
+        
+        for (row,col), cell in table_min.get_celld().items():
+            cell.set_alpha(.3)
+        
+        table_min.auto_set_column_width(col = list(range(len(selects.columns))))

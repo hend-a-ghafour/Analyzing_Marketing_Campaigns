@@ -126,31 +126,31 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - ***Across all channels, more than half of the subscribed users were retained, reflecting a generally strong retention performance once users converted.***
 ## $\color{#454775}{a)}$ $\color{#454775}{Influence}$ $\color{#454775}{Factors}$:
 ### $\color{#454775}{1-}$ **key factors that strongly influence user conversion and retention:** 
-### $\color{#454775}{-}$ _Marketing Channels:_
+#### $\color{#454775}{-}$ _Marketing Channels:_
 ### $\color{#454775}{Observations:}$
 - Email demonstrates the highest performance, achieving both the top conversion rate (3.75%) and retention rate (76.47%) _-Despite its low distribution (5.65% of total Ads)_.
 - Social Media Platforms had a moderate performance with a retention rate close to the overall rate (13.01%), but facebook subscribers were tending to retain more with  a retention rate of 68.30% _(2nd ranking)_.
 - Push notifications rank second in retention (67.95%), despite their low distribution (9.96%) and conversion rate (7.94%), suggesting strong post-conversion engagement.
 - House Ads exhibit a performance gap, with extensive ad distribution (47.08%) not translating into results — both conversion (7.40%) and retention (58.05) rates remain the lowest.
-### $\color{#454775}{-}$ _Variant:_
+#### $\color{#454775}{-}$ _Variant:_
 ### $\color{#454775}{Observations:}$
 - Personalized ads show significantly higher conversion rate of 16.80%, _indicating that personalized messages were more effective at encouraging users to subscribe initially_.
 - A Higher retention rate of was achieved by Controlled Ads 67.63%, exceeding the Personalized group (65.50%) -_Although personalization increased conversions, it did not translate into stronger long-term retention_.
-### $\color{#454775}{-}$ _Languages:_
+#### $\color{#454775}{-}$ _Languages:_
 ### $\color{#454775}{Observations:}$
 - Non-English languages show notably higher Conversion Rates (German 72.60%, Arabic 50%, & Spanish 20%) compared to English 12.12%.
 - Users tend to subscribe more when the ad language matches their preferrences achiving a Conversion Rate of 13.25%.
 - Spanish, German, & English show a relatively close Retention Rates (66.67%, 66.04%, & 66.03%, respectively), while Arabic users had a moderate Retention Rate 58.33%.
 - Retention Rate for matched language (66.33%) is significantly higher than that of non-matched language (51.85%).
   > $\color{#454775}{Note:}$ _The huge gap between the number of users with matched language (7531 user) and the nit matched language (403 users) should be taken into consideration when further investigating these noticable gaps in conversion and retention rates._
-### $\color{#454775}{-}$ _Languages:_
+#### $\color{#454775}{-}$ _Languages:_
 ### $\color{#454775}{Observations:}$
 - **Yonger Users (under 30) →** 19–24 years achieved the highest Conversion Rate (23.24%), followed by 24–30 years (18.72%) and 0–18 years (15.92%), _This is consistent with the Ad Distribution across Age Groups_.
 - **Older Users (above 30) →** showed a significant drop in engagement, with Conversion Rates around 7.29%, & are less likely to engage or convert, _suggesting that ad content  or platform selection may not align well with their preferences_.
 - Ages 19-24 & 30-36 form the highest Retention Rates (68.65% & 64.53%, respectively).
 - Ages 0-18, 24-30, & 55+ had a Retention Rates that are relatively close to the Overall Retention Rate of 65.95%.
 - Ages 30-36 & 55+ tend to remain in a modertae Retention Rate despite their lower Conversion Rates.
-### $\color{#454775}{-}$ _Date Served:_
+#### $\color{#454775}{-}$ _Date Served:_
 ### $\color{#454775}{Observations:}$
 - The 16th and 17th of January recorded the highest conversion rates at 25.52% & 21.95, respectively, _This spike aligns with the peak in ad views on January 15 (784 view)_.
 - The retention rates across different dates show no clear or consistent pattern, _indicating that user retention was not strongly influenced by the specific date the ad was served_.
@@ -178,18 +178,18 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ## $\color{#454775}{a)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence}$:
 ### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Conversion Rates:** 
 ### $\color{#454775}{Observations:}$
-### $\color{#454775}{-}$ _Arabic:_
+#### $\color{#454775}{-}$ _Arabic:_
 - Arabic shows very high conversion rates across most age groups (0–18, 19–24, 24–30).
 - Performance decreases slightly for older users (45–55 and 55+), but still remains higher than English in most cases.
-### $\color{#454775}{-}$ _English:_
+#### $\color{#454775}{-}$ _English:_
 - Ages under 30 show moderate conversion performance, but still lower compared to Arabic and German.
 - Ages 30 and above exhibit very low conversion rates, dropping to nearly 6–7% in multiple age groups.
 - _English displays the most consistent decline with age._
-### $\color{#454775}{-}$ _German:_
+#### $\color{#454775}{-}$ _German:_
 - German shows relatively high conversion rates across all age groups, with most values around 70%–80%.
 - Even older age groups maintain strong conversion performance (e.g., 30–36 at 50% and 36–45 at 80%).
 - _German is the most stable language in terms of performance across ages._
-### $\color{#454775}{-}$ _Spanish:_
+#### $\color{#454775}{-}$ _Spanish:_
 - Spanish shows mixed performance:
   - High values for 0–18, 30–36, and 55+.
   - Low for 19–24 and 24–30.
@@ -203,19 +203,19 @@ above 55 years who tend to retain in a high range despite their lower conversion
 > $\color{#454775}{Note:}$ _These patterns highlight that personalized content may need to be tailored more precisely by both language and age group to improve overall engagement. German and Arabic audiences appear highly responsive, whereas English-speaking and middle-aged Spanish-speaking audiences may require different messaging strategies to increase conversion performance._
 ### $\color{#454775}{2-}$ **The impact of age groups & language on Retention Rates:** 
 ### $\color{#454775}{Observations:}$
-### $\color{#454775}{-}$ _Arabic:_
+#### $\color{#454775}{-}$ _Arabic:_
 - Retention is extremely high across all available age groups (100% in most segments), except one moderate value (66.67% for ages 45–55).
 - Ages 24-45 didn't retain after subscription.
-### $\color{#454775}{-}$ _English:_
+#### $\color{#454775}{-}$ _English:_
 - Consistent retention across all age groups, ranging between 63%–69%.
 - Very stable and uniform pattern, _suggesting English users have predictable retention behavior_.
-### $\color{#454775}{-}$ _German:_
+#### $\color{#454775}{-}$ _German:_
 - High Retention rates for ages below 30 fluctuates between (66.67%) and (76.47%).
 - Lower retention in ages above 30, where it reached 33.33% for for ages 30-36 and remaind at 50% for ages from 36-55+.
-### $\color{#454775}{-}$ _Spanish:_
+#### $\color{#454775}{-}$ _Spanish:_
 - Exceptionally high retention (100%) for younger and mid-age groups (0–36), & a drop to 60% for 55+.
 - Ages 36-55 didn't retain after subscription.
-### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+#### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***English users exhibit steady and predictable retention across all age groups—neither extremely high nor low—indicating consistent engagement but limited upside.***
 - ***German retention varies significantly by age, suggesting demographic sensitivity and potential need for targeted messaging strategies for older audiences.***
 - ***Overall, younger usersretain better in most languages—particularly Arabic and Spanish—while older age segments show more mixed or weaker retention performance, especially in German and Spanish.***
@@ -244,3 +244,30 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Personalized ads are highly effective among younger audiences (under 30), while simpler, non-personalized messages may resonate better with older users (30+).***
 - ***While personalization increases conversion among younger users, it appears to reduce long-term retention, especially for older users.***
 - ***A mixed strategy—personalized content for acquisition and standard communication for retention—may achieve better overall performance.***
+### $\color{#454775}{5-}$  **Daily Engagement and Subscription Patterns by Marketing Channel:** 
+### $\color{#454775}{Observations:}$
+#### $\color{#454775}{-}$ _Overall:_
+- Users tend to engage more around the middle of the month across most marketing channels — except for House Ads, which show no clear temporal pattern.
+#### $\color{#454775}{-}$ _Email:_
+- A significant surge in ads occurred on 15-01-2018, marking the maximum number of daily ads.
+- This spike led to the highest subscription count (63), with 57 users retained — both representing the top figures across all channels.
+- Subscriptions and retentions show a strong positive relationship with the number of daily users, suggesting that increased exposure directly boosted engagement and retention.
+#### $\color{#454775}{-}$ _Facebook:_
+- The daily user pattern is inconsistent, with engagement levels fluctuating throughout the month and peaking near the end.
+- Subscriptions (17) and retentions (10) reached their maximum on 16-01-2018.
+- The overall trend shows a weak-to-moderate alignment between daily user activity, subscriptions, and retentions, implying that ad exposure alone did not strongly influence conversion outcomes.
+#### $\color{#454775}{-}$ _House Ads:_
+- Exhibited a significantly high but irregular number of ads during the month, yet had a limited impact on subscriptions and engagement.
+- Despite the heavy ad distribution, the maximum number of subscribers (21) was lower than several other channels with fewer ads.
+- Shows weak consistency between daily users, subscriptions, and retentions — suggesting overexposure through House Ads did not effectively translate into user engagement.
+- A noticeable decrease in the number of conversions after 10-01-2018
+#### $\color{#454775}{-}$ _Instagram:_
+- Engagement peaked on 17-01-2018, coinciding with the highest levels of daily users, conversions, and retentions.
+- Displays a moderate-to-strong relationship between daily activity and outcomes, indicating that well-timed exposure contributed effectively to conversions and retention.
+#### $\color{#454775}{-}$ _Push Notifications:_
+- Reached its peak around mid-month, reflecting moderate engagement patterns.
+- Shows a moderate consistency between daily users, subscriptions, and retentions, suggesting a reasonable but not strong influence of user activity on outcomes.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Email & Instagram $\color{#454775}{→}$ The change in daily users contributed significantly to higher subscription and retention rates.***
+- ***Facebook & Push $\color{#454775}{→}$ Daily user fluctuations had a moderate influence on subscriptions and retention.***
+- ***House Ads $\color{#454775}{→}$ Should be reconsidered due to their weak and inconsistent impact on engagement, subscriptions, and retention despite extensive ad distribution.***
