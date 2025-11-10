@@ -282,3 +282,31 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***targeted campaigns toward younger audiences may yield better subscription and retention outcomes, where Younger users (below 30) showed stronger and more consistent responses to ads, especially after mid-January, while older groups displayed weaker consistency overall.***
 - ***User engagement peaked mid-month, mainly driven by the email campaign.***
+### $\color{#454775}{3-}$  **Engagement and Subscription Patterns within Weekdays:** 
+### $\color{#454775}{Observations:}$
+#### $\color{#454775}{-}$ _Email:_
+- Reached its peak engagement on Monday.
+- The pattern, except for Monday, is mostly identical — where daily users ≈ converted ≈ retained, showing high consistency.
+- Another noticeable peak occurred on Tuesday, where conversions nearly matched Monday’s levels.
+- The day of ad serving is strongly aligned with the amount of conversions, indicating a clear positive response pattern.
+#### $\color{#454775}{-}$ _Facebook:_
+- A large number of ads distributed throughout the week resulted in relatively low conversions.
+- Engagement peaked midweek (Wednesday, 314 users) and again at the week’s start (Monday), yet conversions peaked on Tuesday (43).
+- The alignment between ad serving and conversions is weak to moderate, suggesting that timing alone doesn’t fully explain engagement outcomes.
+#### $\color{#454775}{-}$ _House Ads:_
+- The volume of ads launched during the week showed minimal impact on conversions.
+- Two engagement peaks were recorded on Monday (Max = 799) and Tuesday, while conversions peaked on Wednesday.
+- The match between ad serving and conversions is weak, implying that ad timing or targeting may not be optimized.
+#### $\color{#454775}{-}$ _Instagram:_
+- A large volume of ads distributed through the week was met with moderate conversions.
+- The highest peak occurred on Wednesday, aligning with the highest conversions, followed by Monday, which also had strong conversion performance.
+- The day of ad serving is strongly aligned with conversions, indicating effective timing and channel performance.
+#### $\color{#454775}{-}$ _Push Notifications:_
+- Two engagement peaks were observed — on Wednesday (highest: 171 users) and Monday.
+- Conversions peaked on Tuesday (19 subscribers), followed by Wednesday.
+- The match between ad serving and conversions is weak to moderate, reflecting partial effectiveness in timing strategy.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Ads were mostly launched between Monday and Wednesday, with conversions largely occurring on these same days — though not always perfectly aligned.***
+- ***Email and Instagram demonstrate strong synchronization between engagement and conversions, suggesting well-timed and effective campaigns.***
+- ***Facebook, House Ads, and Push channels show weaker alignment, indicating that ad timing or targeting strategies might require adjustment.***
+- ***To improve performance, future ad launches should focus on days with historically higher conversion activity, such as Tuesday and Wednesday, optimizing both timing and audience reach.***
