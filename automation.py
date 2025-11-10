@@ -692,3 +692,70 @@ def two_lines_pct (df , col1, col2, col3):
     
     for i, v in enumerate(z): 
         plt.text(i, v, f'{v:.0%}', ha = 'center', va = 'top', fontsize = 7, color = '#313E4C')
+
+
+                #############################################################################################################
+
+
+# A/B Testing (Email Via Peronalized Ads):
+#-----------------------------
+
+# a) Calculations: 
+
+# Create Confidence Interval Range Function: 
+def ci_range (df, col1, target):
+    total = df[col1].sum()
+    group = df[df.index == target].iloc[0 , 0]
+    pct = group / total
+    p0 = .5
+    se = math.sqrt(pct * (1-pct) / total)
+    ci = (pct - 1.96 * se, pct + 1.96 * se)
+    
+    # Checking: 
+    if ci[0] <= pct <= ci[1]: 
+        result = f'''The 95% Confidence Interval for the {target.title()} Group shows that:\n
+    - No Evidence of Systematic Imbalance.\n
+    - The {target.title()} Group is within the Confidence Interval Range of {ci[0]:.2%} & {ci[1]:.2%}\n'''
+    else: 
+        result = '\n- Allocation has gone Wrong, Recheck your Data\n' 
+    
+    return result
+    
+
+                                                 #=========================================================#
+
+
+# b) Visualization: 
+
+# Building a Function for Bar Plots: 
+def bar_plot (df, col1_name, col2_name):
+    # Data
+    x = df[col1_name].apply(lambda x: x.title()).to_list()
+    y = df[col2_name]
+
+    # Define bar colors based on performance
+    colors = ['#805D87' if n == y.max() else '#94D1E7' for n in y]
+
+    # Create the bar chart
+    fig, ax = plt.subplots(figsize = (4 , 4))
+    ax.bar(x, y, .3, color = colors, alpha = .8)
+
+    # Customizing Chart
+    plt.title('', fontsize = 12, color = '#454775')
+
+    plt.xlabel(col1_name, fontsize = 10, color = '#313E4C')
+    plt.xticks(fontsize = 8, color = '#415366')
+
+    plt.ylabel(col2_name, fontsize = 10, color = '#313E4C')
+    plt.yticks(fontsize = 8, color = '#415366')
+
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8) 
+        
+    # Annotate bars with their values
+    for i, v in enumerate(y):
+      plt.text(i, v-.03, f"{v:.2%}", ha = 'center', va = 'top', fontsize = 8, color = '#313E4C') 

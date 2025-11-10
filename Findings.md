@@ -10,7 +10,7 @@
 
 ### $\color{#454775}{-}$ ***A/B Testing - Email:*** 
 #### $\color{#454775} {Conclusion:}$
-The Personalization variant outperformed the Control group by ≈ 38%. This represents a substantial improvement and provides a strong statistical indication that implementing personalized emails can significantly increase conversion rates. The difference has been confirmed as statistically significant, reinforcing confidence in the effectiveness of the personalization strategy.
+The Personalization variant outperformed the Control group by ≈ 38%. 
 
 ### $\color{#454775}{-}$ ***A/B Testing - Email Across Displayed Languages:*** 
 #### $\color{#454775} {Conclusion:}$

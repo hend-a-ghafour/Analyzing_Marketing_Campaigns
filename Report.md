@@ -311,12 +311,12 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Facebook, House Ads, and Push channels show weaker alignment, indicating that ad timing or targeting strategies might require adjustment.***
 - ***To improve performance, future ad launches should focus on days with historically higher conversion activity, such as Tuesday and Wednesday, optimizing both timing and audience reach.***
 ## $\color{#454775}{c)}$ $\color{#454775}{House}$ $\color{#454775}{Ads}$ $\color{#454775}{In-Depth}$ $\color{#454775}{Analysis:}$
-### $\color{#454775}{1-}$  **Engagement and Subscription Patterns within Weekdays:** 
+### $\color{#454775}{1-}$  **Daily conversion and mismatch occurrence via House Ads:** 
 ### $\color{#454775}{Observations:}$
 - Starting from January 11, 2018, there was a sharp and sustained rise in mismatch occurrences, that was met by a sharp decrease in conversions.
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***This sudden increase appears to have had a strong negative impact on conversions, as the number of converted users dropped significantly after this date and remained consistently low despite continued ad activity.***
-### $\color{#454775}{2-}$  **Engagement and Subscription Patterns within Weekdays:** 
+### $\color{#454775}{2-}$  **Estimating Conversion Rates Without the Language Bug:** 
 ### $\color{#454775}{Observations:}$
 - Arabic speakers convert at about 5.1 times the rate compared to English-speakers, while German speakers convert at about 4.7 times , and Spanish-speaking users typically convert about 1.7 times.
 - The Overall Estimated Lost Subscribers ≈ 26, Arabic ≈ 12, German ≈ 10, & Spanish ≈ 6.
@@ -326,3 +326,16 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Had the language bug not occurred, conversion rates for non-English users would likely have followed a stable upward trend similar to English.***
 - ***The sharp decline and zeros observed in the actual data after January 10 clearly reflect the disruptive effect of the mismatch, underlining the importance of correct language targeting in maintaining user engagement and conversion effectiveness.***
+## $\color{#454775}{c)}$ $\color{#454775}{A/B}$ $\color{#454775}{Testing:}$
+### $\color{#454775}{1-}$  *The impact of Email Personalized Ads on Conversion Rate:** 
+### $\color{#454775}{Observations:}$
+- Ad types were relatively even with Email Personalized Ads taking up to 51.26% & the controlled ones with 48.74%.
+- The 95% Confidence Interval for the Personalization Group shows that:
+   - _No Evidence of Systematic Imbalance._
+   - _The Personalization Group is within the Confidence Interval Range of 47.10% & 55.43%_
+- Personalization Conversion Rate ≈ 39.08% & Control Conversion Rate ≈ 28.15%. 
+- The Personalization Group outperformed Control Group by 38.85%.
+- The performed T-Test resulted in a P-Value ≈ 0.65% & SE ≈ -2.73.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***This represents a substantial improvement and provides a strong statistical indication that implementing personalized emails can significantly increase conversion rates.***
+- ***The difference has been confirmed as statistically significant, reinforcing confidence in the effectiveness of the personalization strategy.***
