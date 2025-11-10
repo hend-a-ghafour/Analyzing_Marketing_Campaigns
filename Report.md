@@ -104,7 +104,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - _True = 1_
 - _False = 0_
 ## $\color{#454775}{Data}$ $\color{#454775}{Exploring:}$
-## $\color{#454775}{-}$ $\color{#454775}{Initial}$ $\color{#454775}{Investigation}$:
+## $\color{#454775}{-}$ $\color{#454775}{Initial}$ $\color{#454775}{Investigation:}$
 ### $\color{#454775}{Observations:}$
 - The highest number of users who saw an ad was recorded on 15-01-2018 (Monday), with a total of 784 users. Before this peak, the average daily users were around 327, and afterward, around 284 users per day.
 - Users were most engaged at the beginning of the week, particularly on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
@@ -124,7 +124,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - ***Email marketing, though having the lowest ad distribution, showed a notable subscription pattern, indicating potential for higher efficiency if optimized.***
 - ***The misalignment between ad distribution and conversion performance suggests that marketing efforts might not be fully optimized for channel effectiveness or audience targeting.***
 - ***Across all channels, more than half of the subscribed users were retained, reflecting a generally strong retention performance once users converted.***
-## $\color{#454775}{a)}$ $\color{#454775}{Influence}$ $\color{#454775}{Factors}$:
+## $\color{#454775}{a)}$ $\color{#454775}{Influence}$ $\color{#454775}{Factors:}$
 ### $\color{#454775}{1-}$ **key factors that strongly influence user conversion and retention:** 
 #### $\color{#454775}{-}$ _Marketing Channels:_
 ### $\color{#454775}{Observations:}$
@@ -175,7 +175,7 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Multi-touch ad exposure significantly improves both conversion and retention outcomes, as users who receive repeated exposure are more likely to subscribe and continue using the service.***
 - ***Single-touch exposure produces moderate impact, but not as strong as repeated exposure, this suggests that user reinforcement plays an essential role in both conversion behavior and long-term retention.***
-## $\color{#454775}{b)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence}$:
+## $\color{#454775}{b)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence:}$
 ### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Conversion Rates:** 
 ### $\color{#454775}{Observations:}$
 #### $\color{#454775}{-}$ _Arabic:_
@@ -244,7 +244,7 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Personalized ads are highly effective among younger audiences (under 30), while simpler, non-personalized messages may resonate better with older users (30+).***
 - ***While personalization increases conversion among younger users, it appears to reduce long-term retention, especially for older users.***
 - ***A mixed strategy—personalized content for acquisition and standard communication for retention—may achieve better overall performance.***
-## $\color{#454775}{c)}$ $\color{#454775}{Subscription}$ $\color{#454775}{Pattern}$:
+## $\color{#454775}{c)}$ $\color{#454775}{Subscription}$ $\color{#454775}{Pattern:}$
 ### $\color{#454775}{1-}$  **Daily Engagement and Subscription Patterns by Marketing Channel:** 
 ### $\color{#454775}{Observations:}$
 #### $\color{#454775}{-}$ _Overall:_
@@ -310,3 +310,19 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Email and Instagram demonstrate strong synchronization between engagement and conversions, suggesting well-timed and effective campaigns.***
 - ***Facebook, House Ads, and Push channels show weaker alignment, indicating that ad timing or targeting strategies might require adjustment.***
 - ***To improve performance, future ad launches should focus on days with historically higher conversion activity, such as Tuesday and Wednesday, optimizing both timing and audience reach.***
+## $\color{#454775}{c)}$ $\color{#454775}{House}$ $\color{#454775}{Ads}$ $\color{#454775}{In-Depth}$ $\color{#454775}{Analysis:}$
+### $\color{#454775}{1-}$  **Engagement and Subscription Patterns within Weekdays:** 
+### $\color{#454775}{Observations:}$
+- Starting from January 11, 2018, there was a sharp and sustained rise in mismatch occurrences, that was met by a sharp decrease in conversions.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***This sudden increase appears to have had a strong negative impact on conversions, as the number of converted users dropped significantly after this date and remained consistently low despite continued ad activity.***
+### $\color{#454775}{2-}$  **Engagement and Subscription Patterns within Weekdays:** 
+### $\color{#454775}{Observations:}$
+- Arabic speakers convert at about 5.1 times the rate compared to English-speakers, while German speakers convert at about 4.7 times , and Spanish-speaking users typically convert about 1.7 times.
+- The Overall Estimated Lost Subscribers ≈ 26, Arabic ≈ 12, German ≈ 10, & Spanish ≈ 6.
+- English served as a reliable anchor, showing steady conversion performance throughout the period.
+- Across all languages, the estimated conversion rates never dropped to zero, even on days when the actual conversion rates did.
+- The estimated rates remained within a realistic range, reflecting the underlying performance relationship established before the bug.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Had the language bug not occurred, conversion rates for non-English users would likely have followed a stable upward trend similar to English.***
+- ***The sharp decline and zeros observed in the actual data after January 10 clearly reflect the disruptive effect of the mismatch, underlining the importance of correct language targeting in maintaining user engagement and conversion effectiveness.***

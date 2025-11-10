@@ -1,23 +1,12 @@
 
 
-### $\color{#454775}{-}$ ***Engagement and Subscription Patterns within Weekdays:*** 
-##### $\color{#454775}{\bf Email:}$
 
-##### $\color{#454775}{\bf Facebook:}$
-
-##### $\color{#454775}{\bf House }$ $\color{#454775}{\bf Ads:}$
-
-##### $\color{#454775}{\bf Instagram:}$
-
-##### $\color{#454775}{\bf Push}$ $\color{#454775}{\bf Notifications:}$
-
-#### $\color{#454775} {Conclusion:}$
 
 ### $\color{#454775}{-}$ ***Daily conversion and mismatch occurrence via House Ads:*** 
-Starting from January 11, 2018, there was a sharp and sustained rise in mismatch occurrences.This sudden increase appears to have had a strong negative impact on conversions, as the number of converted users dropped significantly after this date and remained consistently low despite continued ad activity.
+
 ### $\color{#454775}{-}$ ***Estimating Conversion Rates Without the Language Bug:*** 
 #### $\color{#454775} {Conclusion:}$
-Had the language bug not occurred, conversion rates for non-English users would likely have followed a stable upward trend similar to English. The sharp decline and zeros observed in the actual data after January 10 clearly reflect the disruptive effect of the mismatch, underlining the importance of correct language targeting in maintaining user engagement and conversion effectiveness.
+
 
 ### $\color{#454775}{-}$ ***A/B Testing - Email:*** 
 #### $\color{#454775} {Conclusion:}$

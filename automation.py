@@ -584,3 +584,111 @@ def group_line_plots (df1, df2, df3, cols, target):
             cell.set_alpha(.3)
         
         table_min.auto_set_column_width(col = list(range(len(selects.columns))))
+
+
+                #############################################################################################################
+
+
+# House Ads In-Depth Analysis:
+#-----------------------------
+# a) Calculations: 
+
+# expected lost subscribers Function
+def lost_sub (df1, df2):
+    estimated_con = df1.sum().sum()
+    actual_con = df2.sum().sum()
+    expected_lost = estimated_con - actual_con 
+    return np.ceil(expected_lost)
+
+                                                 #=========================================================#
+
+
+# Visualization:
+
+# 1- Creating a line chart function
+def two_lines (df, col1, col2, col3): 
+    # Data
+    x = df[col1].astype('str').to_list()
+    y = df[col2]
+    z = df[col3]
+    
+    # Creating the Chart
+    fig, ax = plt.subplots(figsize = (8 , 5))
+    
+    ax.plot(x, y, color = '#805D87', marker = 'H', markersize = 2, alpha = .8, label = df.columns[1])
+    
+    ax.plot(x, z, color = '#EA9FBB', marker = 'H', markersize = 4, alpha = .5, ls = "--", label = df.columns[2])
+
+    # Chart Customization
+    plt.title('', fontsize = 14, color = '#454775', loc = 'left')
+
+    plt.xlabel(df.columns[0], fontsize = 12, color = '#313E4C')
+    plt.xticks(rotation = 90, fontsize = 8, color = '#415366')
+
+    plt.ylabel('Total', fontsize = 12, color = '#313E4C')
+    plt.yticks(fontsize = 8, color = '#415366')
+
+    plt.grid(axis = 'y', linestyle = ":", color = '#454775', linewidth = 1, alpha = .3)
+        
+    plt.legend(fontsize = 8, labelcolor = '#313E4C', loc = 'upper right', fancybox = True, shadow = True)
+        
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8)
+    
+    # Anotating Values on Chart
+    for i, v in enumerate(y): 
+        plt.text(i, v, v, ha = 'center', va = 'bottom', fontsize = 7, color = '#313E4C')
+    
+    for i, v in enumerate(z): 
+        plt.text(i, v, v, ha = 'center', va = 'top', fontsize = 7, color = '#313E4C')
+
+
+                                                #---------------------------------------------------------#
+
+
+# 2- Creating a line chart function
+def two_lines_pct (df , col1, col2, col3): 
+    # Data
+    x = df[col1].astype('str').to_list()
+    y = df[col2]
+    z = df[col3]
+    
+    # Creating the Chart
+    fig, ax = plt.subplots(figsize = (8 , 5))
+    
+    ax.plot(x, y, color = '#805D87', marker = 'H', markersize = 2, alpha = .5, label = col2[1])
+    
+    ax.plot(x , z, color = '#EA9FBB', marker = 'H', markersize = 4, alpha = .8, ls = "--", label = col3[1]);
+
+    # Chart Customization
+    plt.title('\n\n Actual vs. Estimated Conversion Rates - ' + col2[1].replace('_Actual', '') + '\n', fontsize = 14, color = '#454775', loc = 'left')
+
+    plt.xlabel(col1.title().replace('_' , ' '), fontsize = 12, color = '#313E4C')
+    plt.xticks(rotation = 90, fontsize = 8, color = '#415366')
+
+    plt.ylabel('Total', fontsize = 12, color = '#313E4C')
+    plt.yticks(fontsize = 8, color = '#415366')
+
+    plt.grid(axis = 'y', linestyle = ":", color = '#454775', linewidth = 1, alpha = .3)
+        
+    plt.legend(fontsize = 8, labelcolor = '#313E4C', loc = 'upper right', fancybox = True, shadow = True)
+        
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8)
+    
+    # Anotating Values on Chart
+    for i, v in enumerate(y): 
+        plt.text(i, v, f'{v:.0%}', ha = 'center', va = 'bottom', fontsize = 7, color = '#313E4C')
+    
+    for i, v in enumerate(z): 
+        plt.text(i, v, f'{v:.0%}', ha = 'center', va = 'top', fontsize = 7, color = '#313E4C')
