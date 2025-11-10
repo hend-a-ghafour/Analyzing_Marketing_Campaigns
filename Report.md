@@ -327,7 +327,7 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Had the language bug not occurred, conversion rates for non-English users would likely have followed a stable upward trend similar to English.***
 - ***The sharp decline and zeros observed in the actual data after January 10 clearly reflect the disruptive effect of the mismatch, underlining the importance of correct language targeting in maintaining user engagement and conversion effectiveness.***
 ## $\color{#454775}{c)}$ $\color{#454775}{A/B}$ $\color{#454775}{Testing:}$
-### $\color{#454775}{1-}$  *The impact of Email Personalized Ads on Conversion Rate:** 
+### $\color{#454775}{1-}$  **The impact of Email Personalized Ads on Conversion Rate:** 
 ### $\color{#454775}{Observations:}$
 - Ad types were relatively even with Email Personalized Ads taking up to 51.26% & the controlled ones with 48.74%.
 - The 95% Confidence Interval for the Personalization Group shows that:
@@ -339,3 +339,19 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***This represents a substantial improvement and provides a strong statistical indication that implementing personalized emails can significantly increase conversion rates.***
 - ***The difference has been confirmed as statistically significant, reinforcing confidence in the effectiveness of the personalization strategy.***
+### $\color{#454775}{2-}$  **A/B Testing - Email Across Displayed Languages:** 
+### $\color{#454775}{Observations:}$
+- **English** $\color{#454775}{→}$ Personalized Ads performed well with an increase by 31.85%, & a Statistically significant Result (with P-Value ≈ 2.70% & SE ≈ -2.21).
+-  **Spanish** $\color{#454775}{→}$ Personalized Ads outperformed Control Ads by 166.67 %, & a statistically significant Result (with P-Value ≈ 3.84% & SE ≈ -2.07).
+- **Arabic & German** $\color{#454775}{→}$ Their results are Not Statistically Significant ( with P-Value > 5%).
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***The test performed very well among English and Spanish speakers (increase by ≈ 39.00% & 166.67% respectively), while the results for the other languages were not statistically significant.***
+### $\color{#454775}{2-}$  **A/B Testing - Email Across Age Groups::** 
+### $\color{#454775}{Observations:}$
+- The A/B test results revealed statistically significant differences across all age groups. (Their P-Value < 5%).
+- Ages below 30: Personalized Ads outperformed Control Ads, showing strong positive lift (121.40% for 0-18, 106.24% for 19-24, & 161.19% for 24-30).
+- Ages 30–36 and 55+: Personalized Ads resulted in zero conversions, indicating poor engagement.
+- Ages 36–45 and 45–55: Personalized Ads had a negative impact on conversion rates compared to Control, where Personalized ads were below the controlled ones by -85.23% & -72.22% respectively.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***younger audiences respond more positively to personalized email content, while older groups may require alternative engagement strategies.***
+- ***While the test was a success overall, personalization was not appreciated in certain regions and by certain age groups.***

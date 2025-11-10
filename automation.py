@@ -722,12 +722,59 @@ def ci_range (df, col1, target):
     return result
     
 
+                                                #---------------------------------------------------------#
+
+
+# 2- Loop Demographics Function
+def e_demo (df, col1, col2, target): 
+    results = []
+    for content in np.unique(df[col2].values): 
+        # Isolate the data for only the selected language: 
+        data = df[(df[col1] == target) & (df[col2] == content)]
+        subs = data.groupby(['user_id', 'variant']).converted.max().unstack(level = 1)
+        
+        # Calculating Lift: 
+        con_rate = subs.agg({'control' : np.mean, 'personalization'  :np.mean}).reset_index()
+        con_rate.columns = ['Variant' , 'Conversion Rate']
+        con_var_e = con_rate.set_index('Variant')
+        c_mean = con_var_e.loc['control', 'Conversion Rate']
+        p_mean = con_var_e.loc['personalization', 'Conversion Rate']
+        lift = (p_mean - c_mean) / c_mean
+
+        # Perform Z-Test - to show whether the result is statisctically significant or not:
+        # Creating control DataFrame & dropping its Nulls (to only include conversion outcomes for all users in each variant)
+        c_df = subs.control.dropna().reset_index() 
+
+        # Creating personalization DataFrame & dropping its Nulls (to only include conversion outcomes for all users in each variant)
+        p_df = subs.personalization.dropna().reset_index()
+    
+        # Number of conversions (successes)
+        success = np.array([c_df['control'].sum() , p_df['personalization'].sum()])
+        
+        # Sample sizes
+        nobs = np.array([len(c_df) , len(p_df)])
+
+        z_stat , p_val = proportions_ztest(success , nobs)
+
+        # Append results
+        results.append({
+            col2.replace('_',' ').title() : content,
+            'Control CR' : c_mean,
+            'Personalization CR' : p_mean,
+            'Lift' : lift,
+            'P-value' : p_val,
+            'SE' : z_stat,
+            'Result' : "Statistically Significant" if p_val<= 0.05 else "Not Statistically Significant"
+    })
+    return  pd.DataFrame(results).set_index(col2.replace('_' , ' ').title())
+
+    
                                                  #=========================================================#
 
 
 # b) Visualization: 
 
-# Building a Function for Bar Plots: 
+# 1- Building a Function for Bar Plots: 
 def bar_plot (df, col1_name, col2_name):
     # Data
     x = df[col1_name].apply(lambda x: x.title()).to_list()
@@ -759,3 +806,62 @@ def bar_plot (df, col1_name, col2_name):
     # Annotate bars with their values
     for i, v in enumerate(y):
       plt.text(i, v-.03, f"{v:.2%}", ha = 'center', va = 'top', fontsize = 8, color = '#313E4C') 
+
+
+                                                 #=========================================================#
+
+
+# Creating clustered_bar Function: 
+def clustered_bar (df, col2, col3): 
+    # Data
+    x = np.arange(len(df.index))
+    y = df[col2]
+    z = df[col3]
+
+    # Creating the Chart:
+    fig , ax =  plt.subplots(figsize = (5 , 5))
+    width = .4
+    location = x + width / 2
+
+    bar1 = ax.bar(x, y, width, label = 'Personalization CR', color = '#805D87')
+    bar2 = ax.bar(x + width, z, width, label = 'Control CR', color = '#94D1E7')
+
+    # Customizing the Chart:
+    plt.title('', fontsize = 12, color = '#454775')
+
+    plt.xlabel(df.index.name, fontsize = 10, color = '#313E4c')
+    plt.xticks(location, df.index.to_list(), fontsize = 8, color = '#415366')
+
+    plt.ylabel('Percentage', fontsize = 10, color = '#313E4c')
+    plt.yticks(fontsize = 8, color = '#415366')
+
+    plt.legend(fontsize = 9, labelcolor = '#313E4C', fancybox = True, shadow = True, loc = 'upper right', bbox_to_anchor = (1.5 , 1))
+    
+    for i, w in enumerate(df['P-value']):
+        alpha = 0.8 if w < 0.05 else 0.3
+        bar1[i].set_alpha(alpha)
+        bar2[i].set_alpha(alpha)
+
+    
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    
+    for spine in ax.spines.values():
+        spine.set_linewidth(1.2)
+        spine.set_edgecolor('#415366')
+        spine.set_alpha(.8)
+    
+    # Annotating Values to the Chart:
+    for i, v in enumerate(y):
+        fc = "white" if v <= 0 else "#313E4c"
+        plt.text(i, v,f'\n{v:,.0%}', ha = 'center', va = 'top', fontsize = 7, color = fc)
+
+    for r, s in enumerate(z):
+        fc = "white" if s <= 0 else "#313E4c"
+        plt.text(r + width, s, f'\n{s:,.0%}', ha = 'center', va = 'top', fontsize = 7, color = fc)
+
+    for i, val in enumerate(df.Lift):
+        arrow = '↑' if val > 0 else '↓'
+        color = '#454775' if val > 0 else '#EA9FBB'
+        plt.text(x[i] + width / 2, y[i] , arrow, ha = 'center', va = 'bottom', color = color, fontsize = 16, fontweight = 'bold')
+        plt.text(x[i] + width / 2, y[i] , f'{val: .0%}\n\n', ha = 'center', va = 'bottom', color = color, fontsize = 7, fontstyle = 'italic');
