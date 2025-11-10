@@ -194,14 +194,15 @@ above 55 years who tend to retain in a high range despite their lower conversion
   - High values for 0–18, 30–36, and 55+.
   - Low for 19–24 and 24–30.
   - _This indicates inconsistent response depending on age group._
-### $\color{#454775}{Observations:}$
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Arabic and German outperform other languages overall, showing strong conversion rates across most age groups.***
 - ***English has the weakest performance, especially among users aged 30 and above, where conversion rates drop significantly.***
 - ***Spanish shows age-dependent performance, with high conversion rates in some age brackets but very low in others, indicating uneven responsiveness.***
 - ***German displays the highest stability, maintaining good conversion rates across almost all age segments, making it the most consistently effective language.***
 - ***Arabic performs exceptionally well among younger age groups, suggesting it may be a strong cultural or linguistic driver for younger audiences.***
 > $\color{#454775}{Note:}$ _These patterns highlight that personalized content may need to be tailored more precisely by both language and age group to improve overall engagement. German and Arabic audiences appear highly responsive, whereas English-speaking and middle-aged Spanish-speaking audiences may require different messaging strategies to increase conversion performance._
-### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Retention Rates:** 
+### $\color{#454775}{2-}$ **The impact of age groups & language on Retention Rates:** 
+### $\color{#454775}{Observations:}$
 ### $\color{#454775}{-}$ _Arabic:_
 - Retention is extremely high across all available age groups (100% in most segments), except one moderate value (66.67% for ages 45–55).
 - Ages 24-45 didn't retain after subscription.
@@ -214,8 +215,32 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{-}$ _Spanish:_
 - Exceptionally high retention (100%) for younger and mid-age groups (0–36), & a drop to 60% for 55+.
 - Ages 36-55 didn't retain after subscription.
-### $\color{#454775}{Observations:}$
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***English users exhibit steady and predictable retention across all age groups—neither extremely high nor low—indicating consistent engagement but limited upside.***
 - ***German retention varies significantly by age, suggesting demographic sensitivity and potential need for targeted messaging strategies for older audiences.***
 - ***Overall, younger usersretain better in most languages—particularly Arabic and Spanish—while older age segments show more mixed or weaker retention performance, especially in German and Spanish.***
 > $\color{#454775}{Note:}$ _there is a strong likelihood of bias in the Conversion & Retention Rate data due to small sample sizes, missing values, non-random exposure, and uneven group distributions. The results are informative but should be interpreted with caution, especially when comparing across languages or age groups._
+### $\color{#454775}{3-}$ **The impcat of age group and marketing channels in yielding the highest Conversion Rates:** 
+### $\color{#454775}{Observations:}$
+- Ages 19–24 consistently exhibit the highest conversion rates across all marketing channels, within this age group, Email performs strongest (45.79%), followed by Instagram (31.23%) and Facebook (23.26%).
+- Email remains the dominant conversion driver for the 0–18 and 24–30 age groups (40.66% and 44.83%, respectively), followed by Instagram and Facebook in both cases.
+- Users aged 30–55+ show lower overall conversions, but Email still outperforms other channels in these segments.
+- Conversion strength mainly declines noticeably across all channels after age 30, _indicating reduced responsiveness among older audiences_.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Email is the strongest marketing channel across all age groups, especially for users younger than 30.***
+- ***Instagram and Facebook add additional value only for younger age groups, particularly those between 19–24.***
+- ***Users over 30 demonstrate weaker engagement across all non-email channels, indicating limited responsiveness to social-media-based marketing.***
+- ***The overall subscription pattern shows stronger conversion performance among users below 30, regardless of channel.***
+### $\color{#454775}{4-}$ **Ad type & user's age impact on engagegement:** 
+### $\color{#454775}{Observations:}$
+- Users under 30 show a much higher tendency to subscribe, especially when exposed to personalized ads, with an average conversion rate of 28.06%, compared to 8.42% via controlled ads.
+- For users aged 30 and above, conversion rates drop notably, in this segment, control ads (with an average of 9.51%) actually perform about twice as well as personalized ads (with an average of 5.15%).
+- Ages 30-36 shows the highest retention rate via controlled ads 73.58% & the lowest retention rate via Personalized ads 56%.
+- Retention rates are generally higher for the control variant across all age groups.
+- A noticable gap between controlled and personalized ads retention rates for ages of 30 & above (with an average of 66.58% for controlled ads & 58.94%)
+- Younger users (below 30) display moderate retention for both ad types, with differences between variants being 
+  relatively small.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***Personalized ads are highly effective among younger audiences (under 30), while simpler, non-personalized messages may resonate better with older users (30+).***
+- ***While personalization increases conversion among younger users, it appears to reduce long-term retention, especially for older users.***
+- ***A mixed strategy—personalized content for acquisition and standard communication for retention—may achieve better overall performance.***

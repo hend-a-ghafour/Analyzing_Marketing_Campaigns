@@ -249,19 +249,7 @@ def stackedh_plot (df, col_name, col2_name):
 
 # a) Calculations: 
 
-# 1- Conversion & Retention Rates function:
-def con_ret (df, df2, cols, target): 
-    first = df.groupby(cols)[target].nunique().reset_index()
-    second = df2.groupby(cols)[target].nunique().reset_index()
-    result = first.merge(second, on = cols, suffixes = ('_total', '_part'))
-    result['Rate']= round(result.iloc[:, -1] / result.iloc[:, -2], 4)
-    result = result.sort_values('Rate', ascending = False)
-    result.columns = [x.replace('_', ' ').title() if x in cols else x for x in result.columns]
-    return result
-
-                                                #---------------------------------------------------------#
-
-# 2- Comparison between Conversion & Retention Rates function:
+# Comparison between Conversion & Retention Rates function:
 def comparison (df, df2, df3, cols, target): 
     first = df.groupby(cols)[target].nunique().reset_index()
     second = df2.groupby(cols)[target].nunique().reset_index()
@@ -431,8 +419,25 @@ def h_bar (df, col1, rate):
 
                 #############################################################################################################
 
-# Audience Interactions:
+
+# Demographic Influence:
 #-------------------
+
+# a) Calculations: 
+
+# Conversion & Retention Rates function:
+def con_ret (df, df2, cols, target): 
+    first = df.groupby(cols)[target].nunique().reset_index()
+    second = df2.groupby(cols)[target].nunique().reset_index()
+    result = first.merge(second, on = cols, suffixes = ('_total', '_part'))
+    result['Rate']= round(result.iloc[:, -1] / result.iloc[:, -2], 4)
+    result = result.sort_values('Rate', ascending = False)
+    required_cols = cols + ['Rate']
+    result = result.loc[:, required_cols]
+    result.columns = [x.replace('_', ' ').title() if x in cols else x for x in result.columns]
+    return result
+
+                                                #=========================================================#
 
 # Heatmap Function:
 def heatmap_chart(df): 
