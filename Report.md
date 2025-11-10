@@ -175,7 +175,7 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***Multi-touch ad exposure significantly improves both conversion and retention outcomes, as users who receive repeated exposure are more likely to subscribe and continue using the service.***
 - ***Single-touch exposure produces moderate impact, but not as strong as repeated exposure, this suggests that user reinforcement plays an essential role in both conversion behavior and long-term retention.***
-## $\color{#454775}{a)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence}$:
+## $\color{#454775}{b)}$ $\color{#454775}{Demographic}$ $\color{#454775}{Influence}$:
 ### $\color{#454775}{1-}$ **The Impcat of Age Groups & Language on Conversion Rates:** 
 ### $\color{#454775}{Observations:}$
 #### $\color{#454775}{-}$ _Arabic:_
@@ -244,7 +244,8 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Personalized ads are highly effective among younger audiences (under 30), while simpler, non-personalized messages may resonate better with older users (30+).***
 - ***While personalization increases conversion among younger users, it appears to reduce long-term retention, especially for older users.***
 - ***A mixed strategy—personalized content for acquisition and standard communication for retention—may achieve better overall performance.***
-### $\color{#454775}{5-}$  **Daily Engagement and Subscription Patterns by Marketing Channel:** 
+## $\color{#454775}{c)}$ $\color{#454775}{Subscription}$ $\color{#454775}{Pattern}$:
+### $\color{#454775}{1-}$  **Daily Engagement and Subscription Patterns by Marketing Channel:** 
 ### $\color{#454775}{Observations:}$
 #### $\color{#454775}{-}$ _Overall:_
 - Users tend to engage more around the middle of the month across most marketing channels — except for House Ads, which show no clear temporal pattern.
@@ -271,3 +272,13 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - ***Email & Instagram $\color{#454775}{→}$ The change in daily users contributed significantly to higher subscription and retention rates.***
 - ***Facebook & Push $\color{#454775}{→}$ Daily user fluctuations had a moderate influence on subscriptions and retention.***
 - ***House Ads $\color{#454775}{→}$ Should be reconsidered due to their weak and inconsistent impact on engagement, subscriptions, and retention despite extensive ad distribution.***
+### $\color{#454775}{2-}$  **Daily Engagement and Subscription Patterns by Age Groups:** 
+### $\color{#454775}{Observations:}$
+- The daily user patterns across all age groups were generally similar, with a preference for distributing more ads to users under 30.
+- Daily user counts for all age groups peaked on 15-01-2018, likely influenced by the large email campaign distributed on that day.
+- Conversion and retention peaks for all age groups occurred between 15 and 17 January.
+- During the first half of the month, conversions and retentions showed weak consistency among age groups 0–18, 24–30, 30–36, and 55+, while the remaining groups exhibited moderate to weak consistency.
+- In the second half of the month, a noticeable change was observed, as age groups 0–18 and 19–24 showed moderate consistency, while other age groups demonstrated weak to moderate consistency.
+### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
+- ***targeted campaigns toward younger audiences may yield better subscription and retention outcomes, where Younger users (below 30) showed stronger and more consistent responses to ads, especially after mid-January, while older groups displayed weaker consistency overall.***
+- ***User engagement peaked mid-month, mainly driven by the email campaign.***

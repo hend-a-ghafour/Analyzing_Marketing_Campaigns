@@ -1,12 +1,5 @@
 
-### $\color{#454775}{-}$ ***Daily Engagement and Subscription Patterns by Age Groups:*** 
-- The daily user patterns across all age groups were generally similar, with a preference for distributing more ads to users under 30.
-- Daily user counts for all age groups peaked on 15-01-2018, likely influenced by the large email campaign distributed on that day.
-- Conversion and retention peaks for all age groups occurred between 15 and 17 January.
-- During the first half of the month, conversions and retentions showed weak consistency among age groups 0–18, 24–30, 30–36, and 55+, while the remaining groups exhibited moderate to weak consistency.
-- In the second half of the month, a noticeable change was observed, as age groups 0–18 and 19–24 showed moderate consistency, while other age groups demonstrated weak to moderate consistency.
-#### $\color{#454775} {Conclusion:}$
-User engagement peaked mid-month, mainly driven by the email campaign. Younger users (below 30) showed stronger and more consistent responses to ads, especially after mid-January, while older groups displayed weaker consistency overall.
+
 ### $\color{#454775}{-}$ ***Engagement and Subscription Patterns within Weekdays:*** 
 ##### $\color{#454775}{\bf Email:}$
 - Reached its peak engagement on Monday.
