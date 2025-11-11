@@ -58,16 +58,15 @@ This report analyzes a simulated marketing dataset representing ad-driven subscr
 6.	***Temporal patterns matter:*** Mid-month peaks, particularly January 15–17, strongly correlate with the impact of email campaigns.
 7.	***A/B Testing confirms Email personalization success:*** Statistically significant improvement in conversion suggests personalized email content is effective (p-value ≈ 0.65%).
 8.	***Bias exists in conversion/retention comparisons:*** uneven exposure, disproportionate language distribution, and small subgroup sizes limit generalizability.
-## $\color{#454775}{Data\;Bias\;Consideration}$$\color{#454775}{Bias}$$\color{#454775}{Consideration:}$
+## $\color{#454775}{Data}$ $\color{#454775}{Bias}$ $\color{#454775}{Consideration:}$
 ***Upon reviewing the conversion and retention metrics, it is evident that several bias factors may be influencing the observed results:***
 1. The distribution of users across languages and age groups is highly uneven, with some segments containing very small sample sizes, leading to extreme or unrealistic retention values such as 100% or 0%. In addition, the presence of missing values (NaNs) reduces comparability between categories and introduces uncertainty into trend interpretation.
 2. The multi-touch versus single-exposure groups may also include self-selection bias, where more engaged users receive more ad impressions, inflating conversion and retention rates. <br>
 ***Taken together, these limitations suggest that the current findings should be interpreted with caution, as the results may not fully reflect the true performance across the broader user population.***
-
-### $\color{#454775}{Rcommendation:}$
-- To improve reliability and reduce bias in future analyses, it is recommended to ensure balanced sample sizes across demographic segments and apply randomization techniques when assigning ad types and exposure levels.
-- Additionally, incorporating statistical validation methods such as confidence intervals, cohort filtering, and weighted averages can help stabilize rate fluctuations and provide a more accurate representation of performance.
-- Completing missing data or excluding insufficiently sized groups will further strengthen the validity of the conclusions.
+#### ***Rcommendation:***
+- _To improve reliability and reduce bias in future analyses, it is recommended to ensure balanced sample sizes across demographic segments and apply randomization techniques when assigning ad types and exposure levels._
+- _Additionally, incorporating statistical validation methods such as confidence intervals, cohort filtering, and weighted averages can help stabilize rate fluctuations and provide a more accurate representation of performance._
+- _Completing missing data or excluding insufficiently sized groups will further strengthen the validity of the conclusions._
 
 ### $\color{#454775}{Recommendations:}$ 
 1.	***Fix the language-serving bug immediately***—language mismatches directly reduced conversions, especially for Arabic and German users.
