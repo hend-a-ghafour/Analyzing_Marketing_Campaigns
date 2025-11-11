@@ -1,11 +1,13 @@
 # $\color{#454775}{Analyzing}$ $\color{#454775}{Marketing}$ $\color{#454775}{Campaigns}$
 ## $\color{#454775}{Overview:}$
 A fake marketing dataset based on the data of an online subscription business to investigate the following aspects:
-- The key factors that strongly influence user conversion and retention.  
-- The impact of repeated ads -if any- for a specific user on subscription patterns.  
-- The influence of demographic factors on achieving higher conversion rates.  
-- Subscription trends and patterns over a specific time period.  
-- Investigating the best- and worst-performing marketing channels.  
+1.	Identify key drivers of user conversion and retention.
+2.	Measure the impact of repeated ad exposures on conversion outcomes.
+3.	Examine how demographic elements (age, language) influence performance.
+4.	Evaluate channel effectiveness across distribution, conversion, and retention.
+5.	Detect temporal patterns in ad performance and subscription behavior.
+6.	Diagnose issues such as data mismatch, technical bugs, and experiment design anomalies.
+
 ## $\color{#454775}{Dataset}$ $\color{#454775}{Description:}$
 - ***user_id*** $\color{#454775}{→}$ An identifier for each user _(7309 user)_.<br>
   >  $\color{#454775}{Note:}$ _A user may use more than one platform and engage in more than one day._
@@ -128,10 +130,10 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 ### $\color{#454775}{1-}$ **key factors that strongly influence user conversion and retention:** 
 #### $\color{#454775}{-}$ _Marketing Channels:_
 ### $\color{#454775}{Observations:}$
-- Email demonstrates the highest performance, achieving both the top conversion rate (3.75%) and retention rate (76.47%) _-Despite its low distribution (5.65% of total Ads)_.
+- Email demonstrates the highest performance, achieving both the top conversion rate (33.75%) and retention rate (76.47%) _-Despite its low distribution (5.65% of total Ads)_.
 - Social Media Platforms had a moderate performance with a retention rate close to the overall rate (13.01%), but facebook subscribers were tending to retain more with  a retention rate of 68.30% _(2nd ranking)_.
 - Push notifications rank second in retention (67.95%), despite their low distribution (9.96%) and conversion rate (7.94%), suggesting strong post-conversion engagement.
-- House Ads exhibit a performance gap, with extensive ad distribution (47.08%) not translating into results — both conversion (7.40%) and retention (58.05) rates remain the lowest.
+- House Ads exhibit a performance gap, with extensive ad distribution (47.08%) not translating into results — both conversion (7.40%) and retention (58.05%) rates remain the lowest.
 #### $\color{#454775}{-}$ _Variant:_
 ### $\color{#454775}{Observations:}$
 - Personalized ads show significantly higher conversion rate of 16.80%, _indicating that personalized messages were more effective at encouraging users to subscribe initially_.
@@ -143,7 +145,7 @@ Due to the way pandas stores data, in a large dataset, it can be computationally
 - Spanish, German, & English show a relatively close Retention Rates (66.67%, 66.04%, & 66.03%, respectively), while Arabic users had a moderate Retention Rate 58.33%.
 - Retention Rate for matched language (66.33%) is significantly higher than that of non-matched language (51.85%).
   > $\color{#454775}{Note:}$ _The huge gap between the number of users with matched language (7531 user) and the nit matched language (403 users) should be taken into consideration when further investigating these noticable gaps in conversion and retention rates._
-#### $\color{#454775}{-}$ _Languages:_
+#### $\color{#454775}{-}$ _Age Groups:_
 ### $\color{#454775}{Observations:}$
 - **Yonger Users (under 30) →** 19–24 years achieved the highest Conversion Rate (23.24%), followed by 24–30 years (18.72%) and 0–18 years (15.92%), _This is consistent with the Ad Distribution across Age Groups_.
 - **Older Users (above 30) →** showed a significant drop in engagement, with Conversion Rates around 7.29%, & are less likely to engage or convert, _suggesting that ad content  or platform selection may not align well with their preferences_.
@@ -269,9 +271,9 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - Reached its peak around mid-month, reflecting moderate engagement patterns.
 - Shows a moderate consistency between daily users, subscriptions, and retentions, suggesting a reasonable but not strong influence of user activity on outcomes.
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
-- ***Email & Instagram $\color{#454775}{→}$ The change in daily users contributed significantly to higher subscription and retention rates.***
-- ***Facebook & Push $\color{#454775}{→}$ Daily user fluctuations had a moderate influence on subscriptions and retention.***
-- ***House Ads $\color{#454775}{→}$ Should be reconsidered due to their weak and inconsistent impact on engagement, subscriptions, and retention despite extensive ad distribution.***
+- ***Email & Instagram → The change in daily users contributed significantly to higher subscription and retention rates.***
+- ***Facebook & Push → Daily user fluctuations had a moderate influence on subscriptions and retention.***
+- ***House Ads → Should be reconsidered due to their weak and inconsistent impact on engagement, subscriptions, and retention despite extensive ad distribution.***
 ### $\color{#454775}{2-}$  **Daily Engagement and Subscription Patterns by Age Groups:** 
 ### $\color{#454775}{Observations:}$
 - The daily user patterns across all age groups were generally similar, with a preference for distributing more ads to users under 30.
@@ -346,7 +348,7 @@ above 55 years who tend to retain in a high range despite their lower conversion
 - **Arabic & German** $\color{#454775}{→}$ Their results are Not Statistically Significant ( with P-Value > 5%).
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***The test performed very well among English and Spanish speakers (increase by ≈ 39.00% & 166.67% respectively), while the results for the other languages were not statistically significant.***
-### $\color{#454775}{2-}$  **A/B Testing - Email Across Age Groups::** 
+### $\color{#454775}{3-}$  **A/B Testing - Email Across Age Groups::** 
 ### $\color{#454775}{Observations:}$
 - The A/B test results revealed statistically significant differences across all age groups. (Their P-Value < 5%).
 - Ages below 30: Personalized Ads outperformed Control Ads, showing strong positive lift (121.40% for 0-18, 106.24% for 19-24, & 161.19% for 24-30).
@@ -355,3 +357,30 @@ above 55 years who tend to retain in a high range despite their lower conversion
 ### $\color{#454775}{Key}$ $\color{#454775}{Findings:}$
 - ***younger audiences respond more positively to personalized email content, while older groups may require alternative engagement strategies.***
 - ***While the test was a success overall, personalization was not appreciated in certain regions and by certain age groups.***
+## $\color{#454775}{Data:}$ $\color{#454775}{Bias:}$ $\color{#454775}{Statement:}$
+_The dataset presents several forms of structural and operational bias that may influence the reliability of the analytical outcomes. A significant source of bias arises from inconsistencies in data logging, including repeated or near-duplicated user entries, conflicting subscription records, and inconsistent demographic attributes for the same user. These issues suggest tracking or integration errors that may artificially inflate conversion counts or distort behavioral patterns._ <br>
+_Additionally, the distribution of key variables is highly imbalanced — particularly in language representation, where English ads dominate more than 97% of exposures, while German, Arabic, and Spanish groups are under-represented. This disproportion skews conversion and retention comparisons across languages and introduces sampling bias for non-English segments. Similarly, exposure imbalance across marketing channels (e.g., House Ads accounting for nearly half of all impressions despite weak impact) further biases the evaluation of channel performance._ <br>
+_The presence of a technical bug affecting House Ads—resulting in systematic language mismatches after January 10—introduces temporal bias into conversion outcomes, producing artificial drops in engagement unrelated to user behavior. At the demographic level, uneven age-group distribution and very small subgroup samples (e.g., older users in certain languages) introduce high variance, making observed conversion or retention peaks statistically unreliable. These issues collectively limit the generalizability of insights and mean that conclusions must be interpreted with caution._
+## $\color{#454775}{Conclusion:}$
+### $\color{#454775}{Insights:}$ 
+1.	***Marketing channels strongly influence performance:*** Email and Instagram are the most efficient, with Email generating the highest conversion and retention rates despite low distribution.
+2.	***Personalization increases conversions but not retention:*** Personalized ads outperform control in conversions but underperform in long-term retention, especially for users aged 30+.
+3.	***Demographic influences are significant:*** Younger users (under 30) convert and retain better; German and Arabic-speaking users show exceptionally high conversion rates across age groups.
+4.	***Multi-exposure campaigns are effective:*** Users shown ads multiple times demonstrate significantly higher conversion and retention rates, confirming the positive reinforcement effect.
+5.	***House Ads underperform severely:*** High distribution but low conversion/retention due to technical language mismatches. After January 10, mismatches rose sharply while conversions dropped.
+6.	***Temporal patterns matter:*** Mid-month peaks, particularly January 15–17, strongly correlate with the impact of email campaigns.
+7.	***A/B Testing confirms Email personalization success:*** Statistically significant improvement in conversion suggests personalized email content is effective (p-value ≈ 0.65%).
+8.	Bias exists in conversion/retention comparisons: uneven exposure, disproportionate language distribution, and small subgroup sizes limit generalizability.
+### $\color{#454775}{Recommendations:}$ 
+1.	***Fix the language-serving bug immediately***—language mismatches directly reduced conversions, especially for Arabic and German users.
+2.	***To improve reliability and reduce bias in future analyses***, it is recommended to ensure balanced sample sizes across demographic segments and apply randomization techniques when assigning ad types and exposure levels.
+3.	***Reallocate budget toward Email, Instagram, and Facebook,*** where both conversion and retention outcomes are strongest. Reduce reliance on House Ads.
+4.	***Adopt multi-touch exposure strategy:*** A controlled frequency cap (2–5 exposures) increases conversions without overwhelming users.
+5.	***Segment campaigns by language and age:***
+    - _Younger users → focus on personalized ads and social media channels._
+    - _Older users → use simpler control-style messaging through email._
+6.	***Redesign personalization strategy:*** Use personalized content for acquisition but incorporate standard messaging for retention.
+7.	***Improve tracking infrastructure*** to prevent duplicate conversions and inconsistent logs.
+8.	***Strengthen experiment design*** by balancing exposure across language groups and ensuring randomized distribution.
+9.	***Conduct a second A/B test after system fixes*** to validate personalization impact without data bias.
+
