@@ -16,39 +16,41 @@ This report analyzes a simulated marketing dataset representing ad-driven subscr
 -	***Uneven distribution of exposures:*** 77.07% of users saw only one ad, while a small segment (22.93%) saw up to 12 impressions, heavily influencing conversion/retention outcomes.
 -	***Technical bug in House Ads*** caused recurring language mismatches after January 10, heavily distorting conversion rates.
 ## $\color{#454775}{Obsevations:}$ 
--	Peak daily exposure occurred on 15-01-2018 with 784 users.
--	Weekly engagement was highest on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
--	10.47% of all users converted after seeing an ad.
--	Users were almost evenly assigned between the control and personalization groups.
--	97.55% of ads displayed in English; language mismatch occurred 449 times, mainly from House Ads (86.68%).
--	Age distribution heavily skewed toward younger users: 47.33% under age 30, with the largest segment being 19–24 (1,304 users; 16.56%).
--	Channel distribution: House Ads (47.08%), Facebook + Instagram (≈29%), Push (9.96%), Email (5.65%).
--	Ad repetition: 77.07% one-time exposure, 22.93% multi-exposure.
--	Conversion Rates
-  - _Overall Conversion Rate ≈ 13.01%_
-  -	_Email (33.75%) highest overall - Despite its low distribution (5.65% of total Ads), & House Ads (7.40%) – Despite its extensive ad distribution (47.08%)._
-  -	_Personalized ads: 16.80% vs Control: ≈10%_
-  -	_Language match: 13.25%, non-matched: ≈6.70%_
-  -	_German: 72.6%, Arabic: 50%, Spanish: 20%, English: 12.12%_
-  -	_Younger Users (under 30) ≈ 19.29%, Older Users (above 30) ≈ 7.29%_
-  -	_The 16th and 17th of January recorded the highest conversion rates at 25.52% & 21.95, respectively._
--	Retention Rates
-  -	_Overall Retention Rate ≈ 65.95%._
-  -	_Email 76.47% (Highest), House Ads 58.05 (Lowest)._
-  -	_Control ads: 67.63% vs Personalized: ≈65.5%_
-  -	_German: 66.04%, Arabic: 58.33%, Spanish: 66.67%, English: 66.03%_
-  -	_matched language (66.33%) is significantly higher than non-matched language (51.85%)._
-  -	_Ages 19-24 & 30-36 form the highest Retention Rates (68.65% & 64.53%, respectively)._
-  -	_Ages 30-36 & 55+ tend to remain in a moderate Retention Rate despite their lower Conversion Rates._
-- Multi-exposure users: Conversion 17.83%, Retention 70.19%, & One-time exposure: Conversion 11.58%, Retention 64.01%.
-- Arabic and German outperformed other languages overall, showing strong conversion rates across most age groups, & English had the weakest performance, especially among users aged 30 and above, where conversion rates drop significantly.
-- Ages 19–24 consistently exhibit the highest conversion rates across all marketing channels, within this age group, Email performs strongest (45.79%), followed by Instagram (31.23%) and Facebook (23.26%).
--	Email is the strongest marketing channel across all age groups, especially for users younger than 30.
--	Personalized ads are highly effective among younger audiences (under 30), while simpler, non-personalized messages may resonate better with older users (30+).
--	The Overall Estimated Lost Subscribers via House Ads _(with no bug)_ ≈ 26, Arabic ≈ 12, German ≈ 10, & Spanish ≈ 6.
+-	***Peak daily exposure*** occurred on 15-01-2018 with 784 users.
+-	***Weekly engagement*** was highest on Mondays (1,977 users), followed by Wednesdays (1,610) and Tuesdays (1,588).
+-	***Supscription:*** 10.47% of all users converted after seeing an ad.
+-	***Variant:*** Users were almost evenly assigned between the control and personalization groups.
+-	***Language:*** 97.55% of ads displayed in English; language mismatch occurred 449 times, mainly from House Ads (86.68%).
+-	***Age distribution*** heavily skewed toward younger users: 47.33% under age 30, with the largest segment being 19–24 (1,304 users; 16.56%).
+-	***Channel distribution:*** House Ads (47.08%), Facebook + Instagram (≈29%), Push (9.96%), Email (5.65%).
+-	***Ad repetition:*** 77.07% one-time exposure, 22.93% multi-exposure.
+-	***Conversion Rates:***
+    - _Overall Conversion Rate ≈ 13.01%_
+    -	_Email (33.75%) highest overall - Despite its low distribution (5.65% of total Ads), & House Ads (7.40%) – Despite its extensive ad distribution (47.08%)._
+    -	_Personalized ads: 16.80% vs Control: ≈10%_
+    -	_Language match: 13.25%, non-matched: ≈6.70%_
+    -	_German: 72.6%, Arabic: 50%, Spanish: 20%, English: 12.12%_
+    -	_Younger Users (under 30) ≈ 19.29%, Older Users (above 30) ≈ 7.29%_
+    -	_The 16th and 17th of January recorded the highest conversion rates at 25.52% & 21.95, respectively._
+-	***Retention Rates:***
+    -	_Overall Retention Rate ≈ 65.95%._
+    -	_Email 76.47% (Highest), House Ads 58.05 (Lowest)._
+    -	_Control ads: 67.63% vs Personalized: ≈65.5%_
+    -	_German: 66.04%, Arabic: 58.33%, Spanish: 66.67%, English: 66.03%_
+    -	_matched language (66.33%) is significantly higher than non-matched language (51.85%)._
+    -	_Ages 19-24 & 30-36 form the highest Retention Rates (68.65% & 64.53%, respectively)._
+    -	_Ages 30-36 & 55+ tend to remain in a moderate Retention Rate despite their lower Conversion Rates._
+- ***Multi-exposure users:*** Conversion 17.83%, Retention 70.19%, & ***One-time exposure:*** Conversion 11.58%, Retention 64.01%.
+- ***Demographic Influence:***
+    - _Arabic and German outperformed other languages overall, showing strong conversion rates across most age groups, & English had the weakest performance, especially among users aged 30 and above, where conversion rates drop significantly._
+  - _Ages 19–24 consistently exhibit the highest conversion rates across all marketing channels, within this age group, Email performs strongest (45.79%), followed by Instagram (31.23%) and Facebook (23.26%)._
+-	***Supscription Pattern:*** Email is the strongest marketing channel across all age groups, especially for users younger than 30.
+-	***Variant Pattern:*** Personalized ads are highly effective among younger audiences (under 30), while simpler, non-personalized messages may resonate better with older users (30+).
+-	***Language Bug Impact:*** The Overall Estimated Lost Subscribers via House Ads _(with no bug)_ ≈ 26, Arabic ≈ 12, German ≈ 10, & Spanish ≈ 6.
 -	The Email Personalization Group outperformed Control Group by 38.85%. 
--	Email Personalized Ads in English & Spanish performed well with an increase by 31.85% & 166.67 % respectively.
-- Ages below 30: Email Personalized Ads outperformed Control Ads, showing strong positive lift (121.40% for 0-18, 106.24% for 19-24, & 161.19% for 24-30).
+-	***A/B Testing:***
+    - _Email Personalized Ads in English & Spanish performed well with an increase by 31.85% & 166.67 % respectively._
+    - _Ages below 30: Email Personalized Ads outperformed Control Ads, showing strong positive lift (121.40% for 0-18, 106.24% for 19-24, & 161.19% for 24-30)._
 ### $\color{#454775}{Insights:}$ 
 1.	***Marketing channels strongly influence performance:*** Email and Instagram are the most efficient, with Email generating the highest conversion and retention rates despite low distribution.
 2.	***Personalization increases conversions but not retention:*** Personalized ads outperform control in conversions but underperform in long-term retention, especially for users aged 30+.
